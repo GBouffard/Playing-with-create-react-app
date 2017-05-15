@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-const Button = (props) => {
-  return (
-    <button
-      className={props.className}
-      onClick={props.onClick}>
-      {props.text}
-    </button>
-  )
+export default class Button extends React.Component {
+  render() {
+    return (
+      <button
+        className={this.props.className}
+        onClick={this.props.onClick}>
+        {this.props.text}
+      </button>
+    )
+  }
 }
 
 Button.propTypes = {
@@ -15,5 +17,3 @@ Button.propTypes = {
   text: React.PropTypes.string.isRequired,
   className: React.PropTypes.string
 }
-
-export default Button
