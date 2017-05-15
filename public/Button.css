@@ -6,3 +6,7 @@
   border: 5px solid darkslateblue;
   border-radius: 5px;
 }
+
+.hideButton {
+  display: none;
+}

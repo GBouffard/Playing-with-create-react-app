@@ -5,6 +5,15 @@ import '../public/Button.css';
 import Button from './Button';
 
 class App extends Component {
+
+  constructor(props) { 
+    super(props);
+    this.onClick = this.onClick.bind(this);
+    this.state = {
+      class: 'buttonStyle'
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -18,10 +27,17 @@ class App extends Component {
         <div>
           <Button
             text="click me"
-            className="buttonStyle" />
+            className={this.state.class}
+            onClick={this.onClick} />
         </div>
       </div>
     );
+  }
+
+  onClick() {
+    this.setState({ 
+      class: 'hideButton'
+    });
   }
 }
 
