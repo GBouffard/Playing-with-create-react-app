@@ -4,12 +4,12 @@ import '../public/App.css';
 import '../public/Button.css';
 import Button from './Button';
 import classNames from 'classnames';
+import _ from 'lodash';
 
 class App extends Component {
-
   constructor(props) { 
     super(props);
-    this.onClick = this.onClick.bind(this);
+    this.onClick = _.bind(this.onClick, this);
     this.state = {
       isHidden: false
     }
