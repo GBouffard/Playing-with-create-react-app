@@ -3,6 +3,7 @@ import logo from '../public/logo.svg';
 import '../public/App.css';
 import '../public/Button.css';
 import Button from './Button';
+import classNames from 'classnames';
 
 class App extends Component {
 
@@ -10,11 +11,12 @@ class App extends Component {
     super(props);
     this.onClick = this.onClick.bind(this);
     this.state = {
-      class: 'buttonStyle'
+      isHidden: false
     }
   }
 
   render() {
+    const buttonClassName = classNames('buttonStyle', { 'hideButton': this.state.isHidden });
     return (
       <div className="App">
         <div className="App-header">
@@ -27,7 +29,7 @@ class App extends Component {
         <div>
           <Button
             text="click me"
-            className={this.state.class}
+            className={buttonClassName}
             onClick={this.onClick} />
         </div>
       </div>
@@ -36,7 +38,7 @@ class App extends Component {
 
   onClick() {
     this.setState({ 
-      class: 'hideButton'
+      isHidden: true 
     });
   }
 }
