@@ -9,7 +9,7 @@ describe('logic - ', function() {
     expect(logic).to.have.ownProperty('sum');
     expect(logic).to.have.any.keys('bar', 'sum');
     expect(logic).to.include.keys('myArray');
-    expect(logic).to.have.all.keys('sum', 'myString', 'myArray', 'myBoolean', 'toggleBoolean');
+    expect(logic).to.have.all.keys('sum', 'myString', 'myArray', 'myBoolean', 'toggleBoolean', 'myNumber', 'addToNumber', 'substractToNumber');
     expect(logic).to.contain.all.keys('myArray', 'myBoolean');
     expect(logic).to.contain.any.keys({ 'myBoolean': false });
     expect(logic).not.to.be.an('string');
@@ -69,5 +69,13 @@ describe('logic - ', function() {
   it('toggleBoolean function changes the value of myBoolean property', () => {
     // to.change(object, property)
     expect(logic.toggleBoolean).to.change(logic, 'myBoolean');
+  });
+
+  it('addToNumber function increases the value of myNumber property', () => {
+    expect(logic.addToNumber).to.increase(logic, 'myNumber');
+  });
+
+  it('substractToNumber function decreases the value of myNumber property', () => {
+    expect(logic.substractToNumber).to.decrease(logic, 'myNumber');
   });
 });
