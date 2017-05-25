@@ -9,7 +9,7 @@ describe('logic - ', function() {
     expect(logic).to.have.ownProperty('sum');
     expect(logic).to.have.any.keys('bar', 'sum');
     expect(logic).to.include.keys('myArray');
-    expect(logic).to.have.all.keys('sum', 'myString', 'myArray', 'myBoolean');
+    expect(logic).to.have.all.keys('sum', 'myString', 'myArray', 'myBoolean', 'toggleBoolean');
     expect(logic).to.contain.all.keys('myArray', 'myBoolean');
     expect(logic).to.contain.any.keys({ 'myBoolean': false });
     expect(logic).not.to.be.an('string');
@@ -39,6 +39,11 @@ describe('logic - ', function() {
       expect(logic.myArray).to.have.length.below(7);
       expect(logic.myArray).to.have.length.of.at.most(5);
       expect(logic.myArray[2]).to.be.within(0, 5);
+      expect(logic.myArray).to.include.members([3, 2]);
+      expect(logic.myArray).to.not.include.members([3, 2, 8]);
+      expect(logic.myArray).to.have.members([5, 3]);
+      expect(logic.myArray).to.not.have.members([1, 2, 3, 4, 5, 6]);
+      expect(logic.myArray[0]).to.be.oneOf([0, 6, 9]);
     });
 
     it('a boolean - multiple tests', () => {
@@ -57,5 +62,12 @@ describe('logic - ', function() {
     // but using Chai
     expect(logic.sum(1, 2)).to.equal(3);
     expect(logic.sum(2, 2)).to.equal(4);
+    expect(logic.sum(2, 2)).to.satisfy(function(num) { return num > 3; });
+    expect(logic.sum(2, 2)).to.be.closeTo(3, 1); // closeTo(expected, within a +/- delta range)
   });
- });
+
+  it('toggleBoolean function changes the value of myBoolean property', () => {
+    // to.change(object, property)
+    expect(logic.toggleBoolean).to.change(logic, 'myBoolean');
+  });
+});

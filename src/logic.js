@@ -5,5 +5,8 @@ const logic = {
 };
 
 logic.sum = (a, b) => a + b;
+logic.toggleBoolean = () => {
+  logic.myBoolean = !logic.myBoolean;
+}
 
 export default logic;
