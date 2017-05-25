@@ -1,11 +1,16 @@
 {
-  "name": "Muscle-Memory-App",
+  "name": "Playing-with-create-react-app",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "chai-jquery": "^2.0.0",
     "enzyme": "^2.8.2",
+    "react-addons-test-utils": "^15.3.2",
     "react-scripts": "0.9.5",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.5.4",
+    "sinon": "^2.2.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
