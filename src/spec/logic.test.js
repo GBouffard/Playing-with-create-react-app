@@ -6,6 +6,13 @@ describe('logic - ', function() {
     expect(logic).not.to.be.empty;
     expect(logic).not.to.have.property('foo');
     expect(logic).to.have.property('sum');
+    expect(logic).to.have.any.keys('bar', 'sum');
+    expect(logic).to.have.all.keys('sum', 'randomKey');
+    expect(logic).not.to.be.an('string');
+    expect(logic).to.be.an('object');
+    expect(logic).not.to.be.undefined;
+    expect(logic).not.to.be.null;
+    expect(logic).to.be.ok;
   });
 
   it('sum function sums numbers', () => {
