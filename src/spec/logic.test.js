@@ -19,7 +19,7 @@ describe('logic - ', function() {
     expect(logic).to.be.ok;
   });
 
-  it('multiple properties - ', () => {
+  describe('multiple properties - ', () => {
     it('a string - multiple tests', () => {
       expect(logic.myString).to.be.a('string');
       expect(logic.myString).to.match(/^this is/);
@@ -41,9 +41,9 @@ describe('logic - ', function() {
       expect(logic.myArray[2]).to.be.within(0, 5);
       expect(logic.myArray).to.include.members([3, 2]);
       expect(logic.myArray).to.not.include.members([3, 2, 8]);
-      expect(logic.myArray).to.have.members([5, 3]);
+      expect(logic.myArray).to.have.members([5, 3, 2, 1, 4]);
       expect(logic.myArray).to.not.have.members([1, 2, 3, 4, 5, 6]);
-      expect(logic.myArray[0]).to.be.oneOf([0, 6, 9]);
+      expect(logic.myArray[0]).to.be.oneOf([1, 6, 9]);
     });
 
     it('a boolean - multiple tests', () => {
