@@ -9,7 +9,7 @@ describe('logic - ', function() {
     expect(logic).to.have.ownProperty('sum');
     expect(logic).to.have.any.keys('bar', 'sum');
     expect(logic).to.include.keys('myArray');
-    expect(logic).to.have.all.keys('sum', 'myString', 'myArray', 'myBoolean', 'myStringError', 'toggleBoolean', 'myNumber', 'addToNumber', 'substractToNumber');
+    expect(logic).to.have.all.keys('sum', 'myString', 'myArray', 'myBoolean', 'myError', 'toggleBoolean', 'myNumber', 'addToNumber', 'substractToNumber');
     expect(logic).to.contain.all.keys('myArray', 'myBoolean');
     expect(logic).to.contain.any.keys({ 'myBoolean': false });
     expect(logic).not.to.be.an('string');
@@ -54,7 +54,9 @@ describe('logic - ', function() {
     });
 
     it('an error - multiple tests', () => {
-      expect(logic.myStringError).to.throw('this is an error!');
+      expect(logic.myError).to.throw('this is an error!');
+      expect(logic.myError).to.throw();
+      expect(logic.myError).to.throw(/error/);
     });
   });
 
