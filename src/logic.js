@@ -16,4 +16,6 @@ logic.substractToNumber = () => {
   logic.myNumber -= 1;
 }
 
+logic.myStringError = () => { throw 'this is an error!'; }
+
 export default logic;
