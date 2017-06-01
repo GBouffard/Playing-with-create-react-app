@@ -22,6 +22,20 @@ describe('myDog class', () => {
     });
   });
 
+  describe('fetchBalls function', () => {
+    it('satisfy conditions', () => {
+      for (let i = 0; i < 5; i++) {
+        max.fetchBalls();
+      }
+      expect(max.fetchedBalls).to.be.a('number');
+      expect(max.fetchedBalls).to.equal(5);
+      expect(max.fetchedBalls).to.satisfy((num) => num > 4);
+      expect(max.fetchedBalls).to.satisfy(function(num) {
+        return num < 6;
+      });
+    });
+  });
+
   describe('instance of', () => {
     it('testing the instance of myDog', () => {
       expect(max).to.be.an.instanceof(myDog);
