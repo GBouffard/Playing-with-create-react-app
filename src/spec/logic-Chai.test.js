@@ -24,6 +24,7 @@ describe('logic - ', function() {
       expect(logic.myString).to.be.a('string');
       expect(logic.myString).to.match(/^this is/);
       expect(logic.myString).to.contain('my value');
+      expect(logic.myString).to.have.string('value');
       expect(logic.myString).not.to.contain('whatever');
       expect(logic.myString).to.have.string('is my');
       expect(logic.myString).to.not.be.true;
@@ -61,11 +62,6 @@ describe('logic - ', function() {
   });
 
   it('sum function sums numbers', () => {
-    // This was jasmine testing
-    // expect(logic.sum(1, 2)).toEqual(3);
-    // expect(logic.sum(2, 2)).toEqual(4);
-
-    // but using Chai
     expect(logic.sum(1, 2)).to.equal(3);
     expect(logic.sum(2, 2)).to.equal(4);
     expect(logic.sum(2, 2)).to.satisfy(function(num) { return num > 3; });
