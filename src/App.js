@@ -3,6 +3,7 @@ import logo from '../public/logo.svg';
 import '../public/App.css';
 import '../public/Button.css';
 import Button from './Button';
+import SnapShotLink from './snapshot_link';
 import classNames from 'classnames';
 import _ from 'lodash';
 
@@ -31,6 +32,12 @@ class App extends Component {
             text="click me"
             className={buttonClassName}
             onClick={this.onClick} />
+        </div>
+        <div>
+          <SnapShotLink 
+            page={'http://www.thulium69.com/'}>
+            Thulium (my band)
+          </SnapShotLink>
         </div>
       </div>
     );
