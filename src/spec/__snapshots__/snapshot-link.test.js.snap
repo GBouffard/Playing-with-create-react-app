@@ -1,0 +1,29 @@
+exports[`Link  changes the class when hovered 1`] = `
+<a
+  className="hovered"
+  href="http://www.facebook.com"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}>
+  Facebook / Doesnt have to be the same as the app
+</a>
+`;
+
+exports[`Link  changes the class when left 1`] = `
+<a
+  className="normal"
+  href="http://www.facebook.com"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}>
+  Facebook / Doesnt have to be the same as the app
+</a>
+`;
+
+exports[`Link  renders correctly 1`] = `
+<a
+  className="normal"
+  href="http://www.facebook.com"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}>
+  Facebook / Doesnt have to be the same as the app
+</a>
+`;
