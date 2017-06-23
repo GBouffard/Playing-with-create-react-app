@@ -19,5 +19,17 @@ describe('Change language Button', () => {
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });  
+
+    it('calls the passed-in changeLanguage function when clicked', () => {
+      // Using shallow from enzyme to test a mocked function.
+      const buttonWrapper = shallow(
+        <Button
+          text="Language"
+          className="whatever"
+          onClick={mockChangeLanguage} />
+      );  
+      buttonWrapper.simulate('click');
+      expect(mockChangeLanguage).toBeCalled();
+    });
   });
 });
