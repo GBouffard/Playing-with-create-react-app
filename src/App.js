@@ -11,8 +11,11 @@ class App extends Component {
   constructor(props) { 
     super(props);
     this.onClick = _.bind(this.onClick, this);
+    this.onChangeLanguageClick = _.bind(this.onChangeLanguageClick, this);
     this.state = {
-      isHidden: false
+      isHidden: false,
+      greeting: "Hello",
+      buttonText: "Frenchify"
     }
   }
 
@@ -29,7 +32,7 @@ class App extends Component {
         </p>
         <div>
           <Button
-            text="click me"
+            text="HIDE ME"
             className={buttonClassName}
             onClick={this.onClick} />
         </div>
@@ -39,6 +42,15 @@ class App extends Component {
             Thulium (my band)
           </SnapShotLink>
         </div>
+        <div>
+          <div className="languageContainer">
+            {this.state.greeting}
+          </div>
+          <Button
+            text={this.state.buttonText}
+            className="changeLanguageButton"
+            onClick={this.onChangeLanguageClick} />
+        </div>
       </div>
     );
   }
@@ -46,6 +58,13 @@ class App extends Component {
   onClick() {
     this.setState({ 
       isHidden: true 
+    });
+  }
+
+  onChangeLanguageClick() {
+    this.setState({
+      greeting: this.state.greeting === "Hello" ? "Bonjour" : "Hello",
+      buttonText: this.state.greeting === "Hello" ? "Englishfy" : "Frenchify"
     });
   }
 }
