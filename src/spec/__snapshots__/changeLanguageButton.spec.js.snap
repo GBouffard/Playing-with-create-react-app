@@ -1,0 +1,7 @@
+exports[`Change language Button Unit Test renders and matches its snapshot 1`] = `
+<button
+  className="whatever"
+  onClick={[Function]}>
+  Language
+</button>
+`;
