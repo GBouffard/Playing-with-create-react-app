@@ -32,4 +32,14 @@ describe('Change language Button', () => {
       expect(mockChangeLanguage).toBeCalled();
     });
   });
+
+  describe('Functional Test - within the App test', () => {
+    // Using shallow from enzyme to simulate the container (the whole app) where the button is
+    const appWrapper = shallow(<App />);
+
+    it('is present with initial state text', () => {
+        const languageButtonHtml = '<button class="changeLanguageButton">Frenchify</button>';
+        expect(appWrapper.html()).toContain(languageButtonHtml);
+    });
+  });
 });
