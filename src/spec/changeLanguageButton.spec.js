@@ -45,5 +45,14 @@ describe('Change language Button', () => {
     it('also has the English greeting associated to it present on the page', () => {
       expect(appWrapper.text()).toContain('Hello');
     });
+
+    // from the ShallowWrapper API: .find(selector) --> using class used once as selector in my case
+    const changeLanguageButton = appWrapper.find('.changeLanguageButton');  
+
+    it('modifies the Hello greeting to Bonjour when the frenchify button is clicked', () => {
+      changeLanguageButton.simulate('click');
+      expect(appWrapper.text()).not.toContain('Hello');
+      expect(appWrapper.text()).toContain('Bonjour');
+    });  
   });
 });
