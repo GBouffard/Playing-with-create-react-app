@@ -54,5 +54,11 @@ describe('Change language Button', () => {
       expect(appWrapper.text()).not.toContain('Hello');
       expect(appWrapper.text()).toContain('Bonjour');
     });  
+
+    it('modifies the Bonjour greeting back to Bonjour when the Englishfy button is clicked', () => {
+      changeLanguageButton.simulate('click');
+      expect(appWrapper.text()).toContain('Hello');
+      expect(appWrapper.text()).not.toContain('Bonjour');
+    });
   });
 });
