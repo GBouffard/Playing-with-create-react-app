@@ -41,5 +41,9 @@ describe('Change language Button', () => {
         const languageButtonHtml = '<button class="changeLanguageButton">Frenchify</button>';
         expect(appWrapper.html()).toContain(languageButtonHtml);
     });
+
+    it('also has the English greeting associated to it present on the page', () => {
+      expect(appWrapper.text()).toContain('Hello');
+    });
   });
 });
