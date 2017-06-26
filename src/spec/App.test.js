@@ -37,8 +37,19 @@ describe('main App - ', () => {
 
   describe('Snapshot link', () => {
     it('renders within the app', () => {
-      const snapShotLinkReact = <SnapShotLink page="http://www.thulium69.com/">Thulium (my band)</SnapShotLink>;
+      const snapShotLinkReact = (
+        <SnapShotLink page="http://www.thulium69.com/">
+          Thulium (my band)
+        </SnapShotLink>
+      );
       expect(appWrapper.containsMatchingElement(snapShotLinkReact)).to.equal(true);
+    });
+  });
+
+  describe('Change language button', () => {
+    it('renders within the app', () => {
+      const changeLanguageButtonReact = <Button text="Frenchify" className="changeLanguageButton" />;
+      expect(appWrapper.containsMatchingElement(changeLanguageButtonReact)).to.equal(true);
     });
   });
 });
