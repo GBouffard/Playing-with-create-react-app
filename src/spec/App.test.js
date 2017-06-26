@@ -4,6 +4,7 @@ import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme';
 import App from '../App';
 import SnapShotLink from '../snapshot_link';
+import Button from '../Button';
 
 describe('main App - ', () => {
   chai.use(chaiEnzyme);
@@ -14,7 +15,7 @@ describe('main App - ', () => {
   });
 
   describe('Welcome message', () => {
-    it('renders', () => {
+    it('renders within the app', () => {
       const welcomeWrapper = appWrapper.find('h2');
       expect(welcomeWrapper.text()).to.match(/Welcome to React/);
       expect(welcomeWrapper.text()).to.include('Welcome to React');
@@ -25,10 +26,17 @@ describe('main App - ', () => {
     });
   });
 
-  describe('Snapshot link', () => {
-    it('renders', () => {
+  describe('Hide me button', () => {
+    it('renders within the app', () => {
       // prints the whole node structure. Pretty useful to debug
       console.log(appWrapper.debug());
+      const hideMeButtonReact = <Button text="HIDE ME" className="buttonStyle" />;
+      expect(appWrapper.containsMatchingElement(hideMeButtonReact)).to.equal(true);
+    });
+  });
+
+  describe('Snapshot link', () => {
+    it('renders within the app', () => {
       const snapShotLinkReact = <SnapShotLink page="http://www.thulium69.com/">Thulium (my band)</SnapShotLink>;
       expect(appWrapper.containsMatchingElement(snapShotLinkReact)).to.equal(true);
     });
