@@ -29,7 +29,7 @@ describe('main App - ', () => {
   describe('Hide me button', () => {
     it('renders within the app', () => {
       // prints the whole node structure. Pretty useful to debug
-      console.log(appWrapper.debug());
+      // console.log(appWrapper.debug());
       const hideMeButtonReact = <Button text="HIDE ME" className="buttonStyle" />;
       expect(appWrapper.containsMatchingElement(hideMeButtonReact)).to.equal(true);
     });
@@ -55,6 +55,20 @@ describe('main App - ', () => {
     it('contains the associated text within the app', () => {
       expect(appWrapper.text()).to.contain('Hello');
       expect(appWrapper.text()).to.include('Hello');
+    });
+
+    const changeLanguageButtonWrapper = appWrapper.find('.changeLanguageButton');
+    it('modifies the Hello greeting to Bonjour when the frenchify button is clicked', () => {
+      // Shallow from enzyme gives the following method: wrapper.simulate(event[, ...args])
+      changeLanguageButtonWrapper.simulate('click');
+      expect(appWrapper.text()).not.to.contain('Hello');
+      expect(appWrapper.text()).to.contain('Bonjour');
+    });
+
+    it('modifies the Bonjour greeting back to Bonjour when the Englishfy button is clicked', () => {
+      changeLanguageButtonWrapper.simulate('click');
+      expect(appWrapper.text()).to.contain('Hello');
+      expect(appWrapper.text()).not.to.contain('Bonjour');
     });
   });
 });
