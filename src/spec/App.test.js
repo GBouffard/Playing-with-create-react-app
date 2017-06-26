@@ -10,12 +10,17 @@ describe('main App - ', () => {
 
   it('renders', () => {
     expect(appWrapper).to.have.length(1);
-    expect(appWrapper).to.have.length.above(0);
-    expect(appWrapper).to.have.length.of.at.least(1);
-    expect(appWrapper).to.have.length.below(4);
-    expect(appWrapper).to.have.length.of.at.most(3);
   });
 
-  xit('renders the welcome message', () => {
+  describe('Welcome message', () => {
+    it('renders', () => {
+      const welcomeWrapper = appWrapper.find('h2');
+      expect(welcomeWrapper.text()).to.match(/Welcome to React/);
+      expect(welcomeWrapper.text()).to.include('Welcome to React');
+
+      const welcomeMessageNode = <h2>Welcome to React</h2>;
+      // .containsMatchingElement(node) returns a Boolean
+      expect(appWrapper.containsMatchingElement(welcomeMessageNode)).to.equal(true);
+    });
   });
 });
