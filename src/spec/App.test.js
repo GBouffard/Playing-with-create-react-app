@@ -51,5 +51,10 @@ describe('main App - ', () => {
       const changeLanguageButtonReact = <Button text="Frenchify" className="changeLanguageButton" />;
       expect(appWrapper.containsMatchingElement(changeLanguageButtonReact)).to.equal(true);
     });
+
+    it('contains the associated text within the app', () => {
+      expect(appWrapper.text()).to.contain('Hello');
+      expect(appWrapper.text()).to.include('Hello');
+    });
   });
 });
