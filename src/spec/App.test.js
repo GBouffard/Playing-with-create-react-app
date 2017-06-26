@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme';
 import App from '../App';
+import SnapShotLink from '../snapshot_link';
 
 describe('main App - ', () => {
   chai.use(chaiEnzyme);
@@ -19,8 +20,17 @@ describe('main App - ', () => {
       expect(welcomeWrapper.text()).to.include('Welcome to React');
 
       const welcomeMessageNode = <h2>Welcome to React</h2>;
-      // .containsMatchingElement(node) returns a Boolean
+      // .containsMatchingElement(reactNode) returns a Boolean and compares against a React element
       expect(appWrapper.containsMatchingElement(welcomeMessageNode)).to.equal(true);
+    });
+  });
+
+  describe('Snapshot link', () => {
+    it('renders', () => {
+      // prints the whole node structure. Pretty useful to debug
+      console.log(appWrapper.debug());
+      const snapShotLinkReact = <SnapShotLink page="http://www.thulium69.com/">Thulium (my band)</SnapShotLink>;
+      expect(appWrapper.containsMatchingElement(snapShotLinkReact)).to.equal(true);
     });
   });
 });
