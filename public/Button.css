@@ -1,4 +1,4 @@
-.buttonStyle {
+.hideButton {
   color: deepskyblue;
   background-color: aquamarine; 
   font-weight: bold;
@@ -23,6 +23,6 @@
   text-shadow: 1px 2px 0 rgba(255,0,180,0.5);
 }
 
-.hideButton {
+.hiddenState {
   display: none;
 }

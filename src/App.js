@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   render() {
-    const buttonClassName = classNames('buttonStyle', { 'hideButton': this.state.isHidden });
+    const buttonClassName = classNames('hideButton', { 'hiddenState': this.state.isHidden });
     return (
       <div className="App">
         <div className="App-header">

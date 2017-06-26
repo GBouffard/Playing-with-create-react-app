@@ -46,7 +46,7 @@ describe('Change language Button', () => {
       expect(appWrapper.text()).toContain('Hello');
     });
 
-    // from the ShallowWrapper API: .find(selector) --> using class used once as selector in my case
+    // from the ShallowWrapper API: .find(selectorString) --> using class used once as selector in my case
     const changeLanguageButton = appWrapper.find('.changeLanguageButton');  
 
     it('modifies the Hello greeting to Bonjour when the frenchify button is clicked', () => {

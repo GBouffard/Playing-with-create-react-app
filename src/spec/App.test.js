@@ -27,11 +27,21 @@ describe('main App - ', () => {
   });
 
   describe('Hide me button', () => {
+    const hideMeButtonReact = <Button text="HIDE ME" className="hideButton" />;
+
     it('renders within the app', () => {
       // prints the whole node structure. Pretty useful to debug
       // console.log(appWrapper.debug());
-      const hideMeButtonReact = <Button text="HIDE ME" className="buttonStyle" />;
       expect(appWrapper.containsMatchingElement(hideMeButtonReact)).to.equal(true);
+    });
+
+    it('changes the className of the button when clicked', () => {
+      const hideMeButtonWrapper = appWrapper.find('.hideButton');
+      hideMeButtonWrapper.simulate('click');
+
+      const hiddenStateButtonReact = <Button text="HIDE ME" className="hideButton hiddenState" />;
+      expect(appWrapper.containsMatchingElement(hideMeButtonReact)).to.equal(false);
+      expect(appWrapper.containsMatchingElement(hiddenStateButtonReact)).to.equal(true);
     });
   });
 
