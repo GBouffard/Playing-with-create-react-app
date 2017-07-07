@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme';
 import App from '../App';
@@ -37,12 +37,27 @@ describe('main App - ', () => {
 
     it('changes the className of the button when clicked', () => {
       const hideMeButtonWrapper = appWrapper.find('.hideButton');
+      // many of the Shallow API methods return booleans
+      expect(hideMeButtonWrapper.exists()).to.equal(true);
+      expect(hideMeButtonWrapper.hasClass('hideButton')).to.equal(true);
+
       hideMeButtonWrapper.simulate('click');
 
       const hiddenStateButtonReact = <Button text="HIDE ME" className="hideButton hiddenState" />;
       expect(appWrapper.containsMatchingElement(hideMeButtonReact)).to.equal(false);
       expect(appWrapper.containsMatchingElement(hiddenStateButtonReact)).to.equal(true);
     });
+
+    // WILL TRY WITH NIGHTWATCH
+    // it('disappears when has been clicked', () => {
+      // const hiddenStateButtonReact = <Button text="HIDE ME" className="hideButton hiddenState" />;
+      // const hiddenButtonWrapper = appWrapper.find('.hideButton hiddenState');
+      // // // const hiddenStateButton = document.getElementsByClassnames("hideButton hiddenState")[0];
+      // console.log(hiddenButtonWrapper.style);
+      // expect(hiddenButtonWrapper.style).to.equal(true);
+      // expect(hiddenStateButtonReact).to.have.style('display', 'none');
+
+    // });
   });
 
   describe('Snapshot link', () => {
