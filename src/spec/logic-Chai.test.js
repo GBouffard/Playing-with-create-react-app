@@ -80,4 +80,8 @@ describe('logic - ', function() {
   it('substractToNumber function decreases the value of myNumber property', () => {
     expect(logic.substractToNumber).to.decrease(logic, 'myNumber');
   });
+
+  // also to test on the array with an other function
+  // also play with spies
+  // jest.fn() is a special syntax to create a mock function
 });
