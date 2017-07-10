@@ -32,11 +32,22 @@ module.exports = {
         'browserName': 'chrome'
       }
     },
-    'chrome': {
+    'guillaumeTest': {
+      'launch_url': 'http://localhost',
+      'selenium_port': 4444,
+      'selenium_host': '127.0.0.1',
+      'silent': true,
+      'screenshots': {
+        'enabled': true,
+        'path': SCREENSHOT_PATH
+      },
+      'globals': {
+        'waitForConditionTimeout': 5000
+      },
       'desiredCapabilities': {
         'browserName': 'chrome',
-        'javascriptEnabled': true, // turn off to test progressive enhancement
-        'acceptSslCerts' : true,
+        'javascriptEnabled': true,
+        'acceptSslCerts': true,
         'chromeOptions': {
           'args': [
             '--new-window',
@@ -55,6 +66,7 @@ module.exports = {
             '--disable-save-password-bubble',
             '--disable-plugins-discovery',
             '--disable-plugins',
+            '--disable-popup-blocking',
             '--safe-plugins',
             '--safebrowsing-disable-auto-update',
             '--safebrowsing-disable-download-protection',
@@ -68,12 +80,7 @@ module.exports = {
             '--noerrdialogs',
             '--password-store=basic',
             '--test-type'
-          ],
-          "prefs" : {
-            "credentials_enable_service" : false,
-            "profile.password_manager_enabled" : false,
-            "test-type": true
-          }
+          ]
         }
       }
     }

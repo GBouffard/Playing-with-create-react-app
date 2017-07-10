@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "test2": "./node_modules/.bin/nightwatch --env local",
+    "test2": "./node_modules/.bin/nightwatch --env guillaumeTest",
     "e2e": "node_modules/.bin/nightwatch --config nightwatch.conf.js"
   },
   "chromium-args": {
