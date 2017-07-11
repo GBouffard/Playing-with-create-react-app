@@ -18,6 +18,16 @@ module.exports = {
       .saveScreenshot(config.imgpath(browser) + 'react-app.png');
   },
 
+  'Testing some CSS class names within the app': (browser) => {
+    browser
+      .waitForElementVisible('#hideMe', 1000)
+      .assert.cssClassPresent('#hideMe', 'hideButton')
+      .assert.cssClassNotPresent('#hideMe', 'changeLanguageButton')
+      // need to find a better way to refer to that button without having to use the class name
+      .assert.cssClassPresent('button.changeLanguageButton', 'changeLanguageButton')
+      .assert.cssClassPresent('button[class=changeLanguageButton]', 'changeLanguageButton');
+  },
+
   'Testing the Hide me Button to hide when clicked': (browser) => {
     browser
       .waitForElementVisible('#hideMe', 1000)
