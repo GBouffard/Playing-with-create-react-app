@@ -28,6 +28,15 @@ module.exports = {
       .assert.cssClassPresent('button[class=changeLanguageButton]', 'changeLanguageButton');
   },
 
+  'Testing some CSS properties within the app': (browser) => {
+    browser
+      .waitForElementVisible('#hideMe', 1000)
+      .assert.cssProperty('#hideMe', 'font-weight', 'bold')
+      // colors need to be given as rgba values
+      .assert.cssProperty('button.changeLanguageButton', 'background-color', 'rgba(255, 215, 0, 1)')
+      .assert.cssProperty('button[class=changeLanguageButton]', 'font-size', '15px');
+  },
+
   'Testing the Hide me Button to hide when clicked': (browser) => {
     browser
       .waitForElementVisible('#hideMe', 1000)
