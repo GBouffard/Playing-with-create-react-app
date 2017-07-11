@@ -62,7 +62,12 @@ module.exports = {
   'Testing the presence of the Hello text by default in the language container': (browser) => {
     browser
       .assert.elementPresent('.languageContainer')
-      .assert.containsText('.languageContainer', 'Hello')
-      .end();
+      .assert.containsText('.languageContainer', 'Hello');
+  },
+
+  'Testing the presence of the Frenchify text by default in the change language button': (browser) => {
+    browser
+      .expect.element('.changeLanguageButton').text.to.contain('Frenchify');
+    browser.end();
   }
 };
