@@ -77,6 +77,17 @@ module.exports = {
 
   'Testing the non-presence of the Englishfy text by default in the change language button': (browser) => {
     browser.expect.element('.changeLanguageButton').text.not.to.contain('Englishfy');
+  },
+
+  'Clicking the Frenchify button to change the displayed language to Bonjour and the button to Englishfy': (browser) => {
+    browser
+      .click('.changeLanguageButton')
+      .assert.containsText('.languageContainer', 'Bonjour')
+      .expect.element('.languageContainer').text.not.to.contain('Hello');
+
+    browser
+      .assert.containsText('.changeLanguageButton', 'Englishfy')
+      .expect.element('.changeLanguageButton').text.not.to.contain('Frenchify');
     browser.end();
   }
 };
