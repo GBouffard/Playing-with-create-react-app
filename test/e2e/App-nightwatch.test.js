@@ -66,19 +66,17 @@ module.exports = {
   },
 
   'Testing the non-presence of the Bonjour text by default in the language container': (browser) => {
-    browser
-      // assert doesnt have a .not assertion yet so we have to use expect
-      .expect.element('.languageContainer').text.to.not.contain('Bonjour');
+    // assert doesnt have a .not assertion yet so we have to use expect
+    browser.expect.element('.languageContainer').text.to.not.contain('Bonjour');
   },
 
   'Testing the presence of the Frenchify text by default in the change language button': (browser) => {
-    browser
-      .expect.element('.changeLanguageButton').text.to.contain('Frenchify');
+    browser.expect.element('.changeLanguageButton').to.be.a('button');
+    browser.expect.element('.changeLanguageButton').text.to.contain('Frenchify');
   },
 
   'Testing the non-presence of the Englishfy text by default in the change language button': (browser) => {
-    browser
-      .expect.element('.changeLanguageButton').text.not.to.contain('Englishfy');
+    browser.expect.element('.changeLanguageButton').text.not.to.contain('Englishfy');
     browser.end();
   }
 };
