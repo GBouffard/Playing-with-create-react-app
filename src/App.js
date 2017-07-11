@@ -33,6 +33,7 @@ class App extends Component {
         <div>
           <Button
             text="HIDE ME"
+            id="hideMe"
             className={buttonClassName}
             onClick={this.onClick} />
         </div>

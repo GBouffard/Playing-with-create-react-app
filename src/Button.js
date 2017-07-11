@@ -8,6 +8,7 @@ export default class Button extends React.Component {
   render() {
     return (
       <button
+        id={this.props.id}
         className={this.props.className}
         onClick={this.props.onClick}>
         {this.props.text}
@@ -19,5 +20,6 @@ export default class Button extends React.Component {
 Button.propTypes = {
   onClick: React.PropTypes.func.isRequired,
   text: React.PropTypes.string.isRequired,
-  className: React.PropTypes.string
+  className: React.PropTypes.string,
+  id: React.PropTypes.string
 }
