@@ -65,6 +65,12 @@ module.exports = {
       .assert.containsText('.languageContainer', 'Hello');
   },
 
+  'Testing the non-presence of the Bonjour text by default in the language container': (browser) => {
+    browser
+      // assert doesnt have a .not assertion yet so we have to use expect
+      .expect.element('.languageContainer').text.to.not.contain('Bonjour');
+  },
+
   'Testing the presence of the Frenchify text by default in the change language button': (browser) => {
     browser
       .expect.element('.changeLanguageButton').text.to.contain('Frenchify');
