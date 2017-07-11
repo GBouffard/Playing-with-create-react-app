@@ -4,6 +4,7 @@ module.exports = {
   before: () => console.log(' *** STARTING APP TEST ***'),
   after: () => console.log(' *** ENDING APP TEST ***'),
 
+  // By default the done invocation timeout is set to 10 seconds
   beforeEach: (browser, done) => {
     browser
       .resizeWindow(1024, 768, done)
@@ -14,7 +15,7 @@ module.exports = {
   'my custom functional test name - React App Assert Title': (browser) => {
     browser
       .assert.title('React App')
-      .saveScreenshot(config.imgpath(browser) + 'react-app.png')
+      .saveScreenshot(config.imgpath(browser) + 'react-app.png');
   },
 
   'Testing the Hide me Button to hide when clicked': (browser) => {
@@ -35,8 +36,14 @@ module.exports = {
       .waitForElementVisible('.normal', 1000)
       .click('.normal')
       .pause(1000)
-      .assert.urlEquals("http://www.thulium69.com/")
-      // end () ends the session and close the window
+      .assert.urlContains('thulium')
+      .assert.urlEquals('http://www.thulium69.com/');
+  },
+
+  'Testing the presence of the Hello text by default in the language container': (browser) => {
+    browser
+      .assert.elementPresent('.languageContainer')
+      .assert.containsText('.languageContainer', 'Hello')
       .end();
   }
 };
