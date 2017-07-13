@@ -6,12 +6,19 @@ import React from 'react';
 
 export default class Button extends React.Component {
   render() {
+    const {
+      onClick,
+      text,
+      className,
+      id
+    } = this.props;
+
     return (
       <button
-        id={this.props.id}
-        className={this.props.className}
-        onClick={this.props.onClick}>
-        {this.props.text}
+        id={id}
+        className={className}
+        onClick={onClick}>
+        {text}
       </button>
     )
   }
