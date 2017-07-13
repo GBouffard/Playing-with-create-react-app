@@ -4,6 +4,7 @@ import '../public/App.css';
 import '../public/Button.css';
 import Button from './Button';
 import SnapShotLink from './snapshot_link';
+import MyRadios from './MyRadios';
 import classNames from 'classnames';
 import _ from 'lodash';
 
@@ -21,6 +22,11 @@ class App extends Component {
 
   render() {
     const buttonClassName = classNames('hideButton', { 'hiddenState': this.state.isHidden });
+    const radiosLabelsArray = [
+      'This is Value 0!',
+      'only passing 2 strings!'
+    ];
+
     return (
       <div className="App">
         <div className="App-header">
@@ -52,6 +58,9 @@ class App extends Component {
             className="changeLanguageButton"
             onClick={this.onChangeLanguageClick} />
         </div>
+        <MyRadios
+          radiosNumber={3}
+          radiosLabels={radiosLabelsArray} />
       </div>
     );
   }
