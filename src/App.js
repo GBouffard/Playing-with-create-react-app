@@ -8,6 +8,7 @@ import MyRadios from './MyRadios';
 import classNames from 'classnames';
 import _ from 'lodash';
 import myVideo from '../public/videos/Leonard.mp4';
+import myAudio from '../public/audio/Thulium - For Real.mp3';
 
 class App extends Component {
   constructor(props) { 
@@ -72,6 +73,12 @@ class App extends Component {
             type="video/mp4"
             src={myVideo} /> 
         </video>
+        <audio
+          autoPlay={false}>
+          <source
+            type="audio/mp3"
+            src={myAudio} />
+        </audio>
       </div>
     );
   }
