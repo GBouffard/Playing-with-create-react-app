@@ -7,6 +7,7 @@ import SnapShotLink from './snapshot_link';
 import MyRadios from './MyRadios';
 import classNames from 'classnames';
 import _ from 'lodash';
+import myVideo from '../public/videos/Leonard.mp4';
 
 class App extends Component {
   constructor(props) { 
@@ -61,6 +62,16 @@ class App extends Component {
         <MyRadios
           radiosNumber={3}
           radiosLabels={radiosLabelsArray} />
+        <video
+          muted={true}
+          autoPlay={true}
+          loop={true}
+          width="320"
+          height="240"> 
+          <source
+            type="video/mp4"
+            src={myVideo} /> 
+        </video>
       </div>
     );
   }
