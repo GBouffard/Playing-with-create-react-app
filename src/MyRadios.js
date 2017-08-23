@@ -15,16 +15,20 @@ export default class MyRadios extends React.Component {
       this.props.radiosLabels[number] : radioValue;
 
     return (
-      <label
+      <div
+        className="singleRadioContainer"
         // Each child in an array or iterator should have a unique "key" prop
         key={radioValue}>
         <input
-        type="radio"
-        onChange={this.onChange}
-        value={radioValue}
-        checked={this.state.checkedRadio === radioValue} />
-        <strong>{radioLabel}</strong>
-      </label>
+          type="radio"
+          onChange={this.onChange}
+          value={radioValue}
+          checked={this.state.checkedRadio === radioValue} />
+        <label
+          className="radioText">
+          {radioLabel}
+        </label>
+      </div>
     );
   }
 
@@ -47,7 +51,8 @@ export default class MyRadios extends React.Component {
     const radiosElement = this.renderRadios(this.props.radiosNumber);
     
     return (
-      <div>
+      <div
+        className="multipleRadiosContainer">
         Radios for Testing purposes:
         {radiosElement}
       </div>
