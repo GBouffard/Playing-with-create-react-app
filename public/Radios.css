@@ -11,7 +11,6 @@
 }
 
 .singleRadioContainer {
-  display: block;
   position: relative;
   padding: 3px 25px;
   text-align: left;
@@ -22,4 +21,34 @@
 .radioText {
   color: darkred;
   font: italic small-caps normal 12px/125% "Comic Sans MS", cursive, sans-serif;
+}
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+/* to hide the radio itself - doesnt work so far */
+/*input[type=radio] { display:none; }*/
+
+input[type=radio] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+ /* icons - need to change depending on checked or not */
+input[type=radio] + label:before {
+  color: red;
+  content: "\f096";
+}
+
+input[type=radio]:checked + label:before {
+  color: forestgreen;
+  content: "\f046";
+}
+
+ /* spaces between radio and label - need to change depending if ticked or not */
+input[type=radio] + label:before {
+  letter-spacing: 10px;
+}
+
+input[type=radio]:checked + label:before {
+  letter-spacing: 8px;
 }
