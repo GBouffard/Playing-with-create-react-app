@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../public/logo.svg';
-import '../public/App.css';
-import '../public/Button.css';
-import '../public/Radios.css';
+import '../public/AllcssFiles.css';
 import Button from './Button';
 import SnapShotLink from './snapshot_link';
 import MyRadios from './MyRadios';
