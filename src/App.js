@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import logo from '../public/logo.svg';
 import '../public/App.css';
 import '../public/Button.css';
+import '../public/Radios.css';
 import Button from './Button';
 import SnapShotLink from './snapshot_link';
+import MyRadios from './MyRadios';
 import classNames from 'classnames';
 import _ from 'lodash';
 import myVideo from '../public/videos/Leonard.mp4';
@@ -62,7 +64,7 @@ class App extends Component {
         <MyRadios
           radiosNumber={3}
           radiosLabels={radiosLabelsArray} />
-        <video
+        {/* <video
           muted={true}
           autoPlay={true}
           loop={true}
@@ -72,15 +74,15 @@ class App extends Component {
           <source
             type="video/mp4"
             src={myVideo} /> 
-        </video>
+        </video> */}
         {/* This is how you comment a JSX element */}
-        <audio
+        {/* <audio
           autoPlay={false}
           controls={true}>
           <source
             type="audio/mp3"
             src={myAudio} />
-        </audio>
+        </audio> */}
       </div>
     );
   }
