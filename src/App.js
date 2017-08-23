@@ -4,7 +4,6 @@ import '../public/App.css';
 import '../public/Button.css';
 import Button from './Button';
 import SnapShotLink from './snapshot_link';
-import MyRadios from './MyRadios';
 import classNames from 'classnames';
 import _ from 'lodash';
 import myVideo from '../public/videos/Leonard.mp4';
@@ -68,13 +67,16 @@ class App extends Component {
           autoPlay={true}
           loop={true}
           width="320"
-          height="240"> 
+          height="240"
+          controls={false}> 
           <source
             type="video/mp4"
             src={myVideo} /> 
         </video>
+        {/* This is how you comment a JSX element */}
         <audio
-          autoPlay={false}>
+          autoPlay={false}
+          controls={true}>
           <source
             type="audio/mp3"
             src={myAudio} />
