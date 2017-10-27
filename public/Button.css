@@ -14,6 +14,16 @@
   font-size: 15px;
   border: 2px solid goldenrod;
   border-style: inset;
+  transition-property: border-radius background-color font-weight color;
+  transition-duration: .2s, 1s;
+  transition-timing-function: linear;
+}
+
+.changeLanguageButton:hover {
+  border-radius: 50%;
+  background-color: moccasin;
+  font-weight: bold;
+  color: darkred;
 }
 
 .languageContainer {
