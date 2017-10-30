@@ -45,7 +45,8 @@ class App extends Component {
             onClick={this.onClick} />
         </div>
         <div>
-          <SnapShotLink 
+          <SnapShotLink
+            className="link-with-animation"
             page={'http://www.thulium69.com/'}>
             Thulium (my band)
           </SnapShotLink>

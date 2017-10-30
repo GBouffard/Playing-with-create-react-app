@@ -1,0 +1,25 @@
+.link-with-animation {
+  background: #0F0F0F;
+  color: #FFDD1B;
+  font-size: 18px;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 200px;
+  border-radius: 10px;
+  border: 2px peru dotted;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #FFDD1B, 0 0 14px #FFDD1B, 0 0 16px #FFDD1B, 0 0 20px #FFDD1B, 0 0 30px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #FFDD1B, 0 0 7px #FFDD1B, 0 0 8px #FFDD1B, 0 0 10px #FFDD1B, 0 0 15px #FFDD1B;
+  }
+}
+
+.link-with-animation:hover {
+  color: #ffffff;
+  animation: neon 1.5s ease-in-out infinite alternate;
+}

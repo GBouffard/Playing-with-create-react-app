@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 const status = {
   hovered: 'hovered',
@@ -26,9 +27,11 @@ export default class SnapShotLink extends React.Component {
   }
 
   render() {
+    const snapShotLinkClass = classNames('link-with-animation' , this.state.class);
+
     return (
       <a
-        className={this.state.class}
+        className={snapShotLinkClass}
         href={this.props.page || '#'}
         onMouseEnter={this._onMouseEnter}
         onMouseLeave={this._onMouseLeave}>
