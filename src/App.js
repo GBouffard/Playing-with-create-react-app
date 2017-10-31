@@ -4,6 +4,7 @@ import '../public/AllcssFiles.css';
 import Button from './Button';
 import SnapShotLink from './snapshot_link';
 import MyRadios from './MyRadios';
+import CardFlipContainer from './CardFlipContainer';
 import classNames from 'classnames';
 import _ from 'lodash';
 import myVideo from '../public/videos/Leonard.mp4';
@@ -63,6 +64,7 @@ class App extends Component {
         <MyRadios
           radiosNumber={3}
           radiosLabels={radiosLabelsArray} />
+        <CardFlipContainer />
         {/* <video
           muted={true}
           autoPlay={true}
