@@ -5,12 +5,14 @@ export default class CardFlipContainer extends React.Component {
     const cardElement = (
       <div className="card">
         <div className="front">
-          <img 
+          <img
+            className="card-style"
             src="../images/card-back.svg"
             alt="back"/>
         </div>
         <div className="front back">
-          <img 
+          <img
+            className="card-style"
             src="../images/diamonds-king.svg"
             alt="front"/>
         </div>
