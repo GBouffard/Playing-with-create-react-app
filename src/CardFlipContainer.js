@@ -15,28 +15,29 @@ function randomCardSrc() {
 
 export default class CardFlipContainer extends React.Component {
   render() {
-    const cardElement = (
-      <div className="card">
-        <div className="front">
-          <img
-            className="card-style"
-            src="../images/card-back.svg"
-            alt="back"/>
-        </div>
-        <div className="front back">
-          <img
-            className="card-style"
-            src={randomCardSrc()}
-            alt="front"/>
-        </div>
-      </div>
-    );
+    const cardElements = [];
+    for (let i = 0; i < 5; i++) {
+      cardElements.push(
+        <div className="card">
+          <div className="front">
+            <img
+              className="card-style"
+              src="../images/card-back.svg"
+              alt="back"/>
+            </div>
+            <div className="front back">
+              <img
+                className="card-style"
+                src={randomCardSrc()}
+                alt="front"/>
+              </div>
+            </div>
+      );
+    }
 
     return (
       <div className="cards-container">
-        {cardElement}
-        {cardElement}
-        {cardElement}
+        {cardElements}
       </div>
     )
   }
