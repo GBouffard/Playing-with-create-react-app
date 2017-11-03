@@ -2,8 +2,9 @@
   display: flex;
   width: 100%;
   cursor: pointer;
-  height: 140px;
+  height: 150px;
   perspective: 600;
+  background: green;
 }
 
 .card {
@@ -11,6 +12,7 @@
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
   width: 100%;
+  padding-top: 15px;
 }
 
 .card:hover {
@@ -19,7 +21,6 @@
 
 .front {
   backface-visibility: hidden;
-  border-radius: 6px;
   height: 100%;
   position: absolute;
   overflow: hidden;
@@ -27,8 +28,7 @@
 }
 
 .card .back {
-  background: #eaeaed;
-  color: #0087cc;
+  background: green;
   line-height: 150px;
   text-align: center;
   transform: rotateY(180deg);
