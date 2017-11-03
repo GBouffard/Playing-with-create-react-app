@@ -21,7 +21,6 @@
 
 .front {
   backface-visibility: hidden;
-  height: 100%;
   position: absolute;
   overflow: hidden;
   width: 100%;
@@ -29,7 +28,6 @@
 
 .card .back {
   background: green;
-  line-height: 150px;
   text-align: center;
   transform: rotateY(180deg);
 }
