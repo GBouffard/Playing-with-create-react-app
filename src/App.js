@@ -5,12 +5,13 @@ import Button from './Button';
 import SnapShotLink from './snapshot_link';
 import MyRadios from './MyRadios';
 import CardFlipContainer from './CardFlipContainer';
+import DropdownList from './dropdown-list';
 import classNames from 'classnames';
 import _ from 'lodash';
 import myVideo from '../public/videos/Leonard.mp4';
 import myAudio from '../public/audio/Thulium - For Real.mp3';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) { 
     super(props);
     this.onClick = _.bind(this.onClick, this);
@@ -28,6 +29,15 @@ class App extends Component {
       'This is Value 0!',
       'only passing 2 strings!'
     ];
+    const dropdownArray = [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday'
+    ];
 
     return (
       <div className="App">
@@ -35,9 +45,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+
         <div>
           <Button
             text="HIDE ME"
@@ -45,6 +57,7 @@ class App extends Component {
             className={buttonClassName}
             onClick={this.onClick} />
         </div>
+
         <div>
           <SnapShotLink
             className="link-with-animation"
@@ -52,6 +65,7 @@ class App extends Component {
             Thulium (my band)
           </SnapShotLink>
         </div>
+
         <div>
           <div className="languageContainer">
             {this.state.greeting}
@@ -61,10 +75,17 @@ class App extends Component {
             className="changeLanguageButton"
             onClick={this.onChangeLanguageClick} />
         </div>
+
         <MyRadios
           radiosNumber={3}
           radiosLabels={radiosLabelsArray} />
+
+        <DropdownList
+          options={dropdownArray}
+          dropdownListId="days-of-the-weeks-dropdown-list"/>
+
         <CardFlipContainer />
+
         {/* <video
           muted={true}
           autoPlay={true}
@@ -101,5 +122,3 @@ class App extends Component {
     });
   }
 }
-
-export default App;
