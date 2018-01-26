@@ -20,12 +20,16 @@ function makeOptions(arr) {
   });
 }
 
+function getDateFromLocalStorage() {
+  return localStorage.selectedDay || null;
+}
+
 export default class DropdownList extends Component {
   constructor() {
     super();
     this.onChange = this.changeSelectedValue.bind(this);
     this.state = {
-      selectedValue: null
+      selectedValue: getDateFromLocalStorage()
     };
   }
 
@@ -33,6 +37,7 @@ export default class DropdownList extends Component {
     this.setState({
       selectedValue: event.target.value
     });
+    localStorage.setItem("selectedDay", event.target.value); 
   }
 
   render() {
