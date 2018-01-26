@@ -1,0 +1,47 @@
+/* .scss files 
+.dropdown-list {
+  #code1
+
+  &__select {
+    #code2
+
+
+would need to 'npm run eject' and then 
+npm install sass-loader node-sass --save-dev
+which I don't want to do now, so sticking BEM into css. */
+
+.dropdown-list {
+  margin: 2rem;
+}
+
+.dropdown-list__select {
+  position: relative;
+  width: 50%;
+  height: 3rem;
+  padding: .5rem 4rem .5rem 1rem;;
+  background: thistle;
+  border: .25rem solid;
+  appearance: none;
+  font-family: Verdana;
+  font-size: 1.25rem;
+  color: purple;
+}
+
+.dropdown-list__select:focus {
+  /* by default a select has an outline when focused */
+  outline: none;
+}
+
+.dropdown-list__icon {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width:  3rem;
+  height: 3rem;
+  padding: 1rem;
+  background: blue;
+  fill: white;
+  transition: background $very-fast;
+}
