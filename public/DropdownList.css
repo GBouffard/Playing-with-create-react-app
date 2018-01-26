@@ -33,15 +33,14 @@ which I don't want to do now, so sticking BEM into css. */
 }
 
 .dropdown-list__icon {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width:  3rem;
-  height: 3rem;
-  padding: 1rem;
-  background: blue;
-  fill: white;
-  transition: background $very-fast;
+  position: relative;
+  top: .5rem;
+  right: 2.5rem;
+  width:  2rem;
+  height: 2rem;
+  fill: purple;
+  background: transparent;
+  transform: rotate(180deg);
+  /* to make the dropdown list clickable through the icon */
+  pointer-events: none;
 }

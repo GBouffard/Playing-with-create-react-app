@@ -43,16 +43,14 @@ export default class DropdownList extends Component {
   render() {
     const {
       options,
-      dropdownListId,
-      additionalClassName
+      dropdownListId
     } = this.props;
     
     const optionComponents = makeOptions(options);
-    let className = classNames('dropdown-list', additionalClassName);
 
     return (
       <div
-        className={className}>
+        className="dropdown-list">
         <select
           className="dropdown-list__select"
           role="listbox"
@@ -61,6 +59,12 @@ export default class DropdownList extends Component {
           onChange={this.onChange}>
           {optionComponents}
         </select>
+
+        <svg
+          className="dropdown-list__icon">
+          <use
+            xlinkHref={'../images/triangle.svg#myTriangle'} />
+        </svg>
       </div>
     );
   }
@@ -78,6 +82,5 @@ DropdownList.propTypes = {
     PropTypes.string,
     PropTypes.number
   ]),
-  dropdownListId: PropTypes.string,
-  additionalClassName: PropTypes.string
+  dropdownListId: PropTypes.string
 };
