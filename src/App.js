@@ -1,5 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import MainPage from './main-page'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MainPage from './main-page';
 
-ReactDOM.render(<MainPage />, document.getElementsByTagName('body')[0])
+ReactDOM.render(
+  <MainPage />,
+  document.getElementsByTagName('body')[0]
+);
