@@ -2,17 +2,35 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
-import CardFlipContainer from './CardFlipContainer';
 import AudiosAndVideos from './AudiosAndVideos';
+import Comment from './Comment';
+import SVGsCardsAnimation from './SVGsCardsAnimation';
 import '../public/index.css';
 
 ReactDOM.render(
   (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={App}/>
-        <Route exact path="/cards-container" component={CardFlipContainer}/>
-        <Route exact path="/audios-and-videos" component={AudiosAndVideos}/>
+        <Route
+          exact
+          path="/"
+          component={App}/>
+
+        <Route
+          exact
+          path="/audios-and-videos"
+          component={AudiosAndVideos}/>
+
+        <Route
+          exact
+          path="/comment"
+          component={Comment}/>
+
+        <Route
+          exact
+          path="/svg-cards-animation"
+          component={SVGsCardsAnimation}/>
+
       </Switch>
     </BrowserRouter>
   ),

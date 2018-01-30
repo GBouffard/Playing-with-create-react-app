@@ -79,19 +79,22 @@ export default class MainPage extends Component {
           dropdownListId="days-of-the-weeks-dropdown-list"/>
 
         <div>
-          <Link to='/cards-container'>
-            SVGs cards container
-          </Link>
-        </div>
-
-        <div>
           <Link to='/audios-and-videos'>
             Audio and videos
           </Link>
         </div>
 
-        {/* This is how you comment a JSX element */}
+        <div>
+          <Link to='/comment'>
+            Add comments
+          </Link>
+        </div>
 
+        <div>
+          <Link to='/svg-cards-animation'>
+            SVGs cards animation
+          </Link>
+        </div>
       </div>
     );
   }
