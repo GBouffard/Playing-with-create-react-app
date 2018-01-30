@@ -5,12 +5,9 @@ import '../public/AllcssFiles.css';
 import Button from './Button';
 import SnapShotLink from './snapshot_link';
 import MyRadios from './MyRadios';
-import CardFlipContainer from './CardFlipContainer';
 import DropdownList from './dropdown-list';
 import classNames from 'classnames';
 import _ from 'lodash';
-import myVideo from '../public/videos/Leonard.mp4';
-import myAudio from '../public/audio/Thulium - For Real.mp3';
 
 export default class MainPage extends Component {
   constructor(props) { 
@@ -44,7 +41,7 @@ export default class MainPage extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Guillaume's React App Sandbox</h2>
+          <h2>Guillaume s React App Sandbox</h2>
         </div>
 
         <div>
@@ -81,27 +78,20 @@ export default class MainPage extends Component {
           options={dropdownArray}
           dropdownListId="days-of-the-weeks-dropdown-list"/>
 
-        <Link to='/cards-container'>Get to cards container</Link>
+        <div>
+          <Link to='/cards-container'>
+            SVGs cards container
+          </Link>
+        </div>
 
-        {/* <video
-          muted={true}
-          autoPlay={true}
-          loop={true}
-          width="320"
-          height="240"
-          controls={false}> 
-          <source
-            type="video/mp4"
-            src={myVideo} /> 
-        </video> */}
+        <div>
+          <Link to='/audios-and-videos'>
+            Audio and videos
+          </Link>
+        </div>
+
         {/* This is how you comment a JSX element */}
-        {/* <audio
-          autoPlay={false}
-          controls={true}>
-          <source
-            type="audio/mp3"
-            src={myAudio} />
-        </audio> */}
+
       </div>
     );
   }
