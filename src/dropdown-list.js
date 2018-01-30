@@ -5,11 +5,12 @@ import classNames from 'classnames';
 //reminder: role are useful for accessibility purposes
 
 function makeOptions(arr) {
-  return arr.map(function(option) {
+  return arr.map(function(option, i) {
     const optionProps = {
       className: 'dropdown-list__option',
       role: 'option',
-      value: option
+      value: option,
+      key: i
     };
 
     return (

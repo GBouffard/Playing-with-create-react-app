@@ -18,7 +18,9 @@ export default class CardFlipContainer extends React.Component {
     const cardElements = [];
     for (let i = 0; i < 5; i++) {
       cardElements.push(
-        <div className="card">
+        <div
+          key={i}
+          className="card">
           <div className="front">
             <img
               className="card-style"
