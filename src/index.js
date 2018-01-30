@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
 import AudiosAndVideos from './AudiosAndVideos';
+import DropdownMenus from './DropdownMenus';
 import Comment from './Comment';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
 import '../public/index.css';
@@ -15,6 +16,11 @@ ReactDOM.render(
           exact
           path="/"
           component={App}/>
+
+        <Route
+          exact
+          path="/dropdown-menus"
+          component={DropdownMenus}/>
 
         <Route
           exact

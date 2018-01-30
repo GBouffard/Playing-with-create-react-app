@@ -5,7 +5,6 @@ import '../public/AllcssFiles.css';
 import Button from './Button';
 import SnapShotLink from './snapshot_link';
 import MyRadios from './MyRadios';
-import DropdownList from './dropdown-list';
 import classNames from 'classnames';
 import _ from 'lodash';
 
@@ -26,15 +25,6 @@ export default class MainPage extends Component {
     const radiosLabelsArray = [
       'This is Value 0!',
       'only passing 2 strings!'
-    ];
-    const dropdownArray = [
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-      'Sunday'
     ];
 
     return (
@@ -74,9 +64,11 @@ export default class MainPage extends Component {
           radiosNumber={3}
           radiosLabels={radiosLabelsArray} />
 
-        <DropdownList
-          options={dropdownArray}
-          dropdownListId="days-of-the-weeks-dropdown-list"/>
+        <div>
+          <Link to='/dropdown-menus'>
+            Dropdown Menus
+          </Link>
+        </div>
 
         <div>
           <Link to='/audios-and-videos'>
