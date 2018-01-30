@@ -4,7 +4,6 @@ import logo from '../public/logo.svg';
 import '../public/AllcssFiles.css';
 import Button from './Button';
 import SnapShotLink from './snapshot_link';
-import MyRadios from './MyRadios';
 import classNames from 'classnames';
 import _ from 'lodash';
 
@@ -22,10 +21,6 @@ export default class MainPage extends Component {
 
   render() {
     const buttonClassName = classNames('hideButton', { 'hiddenState': this.state.isHidden });
-    const radiosLabelsArray = [
-      'This is Value 0!',
-      'only passing 2 strings!'
-    ];
 
     return (
       <div className="App">
@@ -60,9 +55,11 @@ export default class MainPage extends Component {
             onClick={this.onChangeLanguageClick} />
         </div>
 
-        <MyRadios
-          radiosNumber={3}
-          radiosLabels={radiosLabelsArray} />
+        <div>
+          <Link to='/radios'>
+            Radios
+          </Link>
+        </div>
 
         <div>
           <Link to='/dropdown-menus'>

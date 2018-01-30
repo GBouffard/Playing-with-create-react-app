@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
-import AudiosAndVideos from './AudiosAndVideos';
+import Radios from './Radios';
 import DropdownMenus from './DropdownMenus';
+import AudiosAndVideos from './AudiosAndVideos';
 import Comment from './Comment';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
 import '../public/index.css';
@@ -16,6 +17,11 @@ ReactDOM.render(
           exact
           path="/"
           component={App}/>
+
+        <Route
+          exact
+          path="/radios"
+          component={Radios}/>
 
         <Route
           exact
