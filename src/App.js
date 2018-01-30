@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../public/logo.svg';
 import '../public/AllcssFiles.css';
 import Button from './Button';
@@ -43,7 +44,7 @@ export default class MainPage extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Guillaume's React App Sandbox</h2>
         </div>
 
         <div>
@@ -80,7 +81,7 @@ export default class MainPage extends Component {
           options={dropdownArray}
           dropdownListId="days-of-the-weeks-dropdown-list"/>
 
-        <CardFlipContainer />
+        <Link to='/cards-container'>Get to cards container</Link>
 
         {/* <video
           muted={true}
