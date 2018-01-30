@@ -56,6 +56,12 @@ export default class MainPage extends Component {
         </div>
 
         <div>
+          <Link to='/input-fields'>
+            Input fields
+          </Link>
+        </div>
+
+        <div>
           <Link to='/radios'>
             Radios
           </Link>
