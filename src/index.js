@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
 import InputFields from './InputFields';
+import Paragraphs from './Paragraphs';
 import Radios from './Radios';
 import DropdownMenus from './DropdownMenus';
 import AudiosAndVideos from './AudiosAndVideos';
@@ -19,6 +20,11 @@ ReactDOM.render(
           exact
           path="/"
           component={App}/>
+
+        <Route
+          exact
+          path="/paragraphs"
+          component={Paragraphs}/>
 
         <Route
           exact
