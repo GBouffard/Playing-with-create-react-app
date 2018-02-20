@@ -1,0 +1,80 @@
+.input-field {
+  position: relative;
+  width: 100%;
+  margin: 0 0 .75rem;
+}
+
+/* input-field__input */
+
+.input-field__input {
+  display: block;
+  position: relative;
+  z-index: z('input-field');
+  width: 50%;
+  height: 3rem;
+  margin: 0 0 .5rem;
+  padding: 0 1rem;
+  background: white;
+  border: 2px solid grey;
+  font-family: verdana;
+  transition: border-color 1s, background 1s;
+}
+
+.input-field__input:focus {
+  border-color: seagreen;
+  background-color: mintcream;
+  outline: none;
+}
+
+.input-field__input--error {
+  background: mistyrose;
+  border: 2px solid crimson;
+}
+
+.input-field__input--textarea {
+  min-height: 7.25rem;
+  padding: .5rem 1rem;
+  resize: vertical;
+}
+
+/* input-field__counter */
+
+.input-field__counter {
+  opacity: 0.1;
+  transition: opacity 1s;
+  animation: bubble 1 .5s;
+}
+
+.input-field__counter--error {
+  opacity: 1;
+  color: red;
+  animation: shake 1 .5s;
+}
+
+/* input-field__error */
+
+.input-field__error {
+  vertical-align: top;
+  overflow: hidden;
+  margin-top: -.5rem;
+  padding-top: .5rem;
+}
+
+.input-field__error {
+  display: block;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  color: red;
+}
+
+/* input-field__visibly-hidden */
+
+.input-field__visibly-hidden {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  clip: rect(0, 0, 0, 0);
+}
