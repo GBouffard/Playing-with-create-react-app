@@ -108,6 +108,12 @@ export default class MainPage extends Component {
             SVGs cards animation
           </Link>
         </div>
+
+        <div>
+          <Link to='/matter-js'>
+            Testing Matter JS
+          </Link>
+        </div>
       </div>
     );
   }

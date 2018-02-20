@@ -11,6 +11,7 @@ import Comment from './Comment';
 import Overlays from './Overlays';
 import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
+import MatterJs from './MatterJs';
 import '../public/index.css';
 
 ReactDOM.render(
@@ -67,6 +68,11 @@ ReactDOM.render(
           exact
           path="/svg-cards-animation"
           component={SVGsCardsAnimation}/>
+
+        <Route
+          exact
+          path="/matter-js"
+          component={MatterJs}/>
 
       </Switch>
     </BrowserRouter>
