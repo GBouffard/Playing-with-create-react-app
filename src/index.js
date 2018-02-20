@@ -9,6 +9,7 @@ import DropdownMenus from './DropdownMenus';
 import AudiosAndVideos from './AudiosAndVideos';
 import Comment from './Comment';
 import Overlays from './Overlays';
+import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
 import '../public/index.css';
 
@@ -56,6 +57,11 @@ ReactDOM.render(
           exact
           path="/overlays"
           component={Overlays}/>
+
+        <Route
+          exact
+          path="/svgs"
+          component={SVGs}/>
 
         <Route
           exact

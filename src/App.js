@@ -98,6 +98,12 @@ export default class MainPage extends Component {
         </div>
 
         <div>
+          <Link to='/svgs'>
+            SVGs
+          </Link>
+        </div>
+
+        <div>
           <Link to='/svg-cards-animation'>
             SVGs cards animation
           </Link>
