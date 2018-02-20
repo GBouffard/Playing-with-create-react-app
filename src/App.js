@@ -120,6 +120,13 @@ export default class MainPage extends Component {
             Testing Matter JS
           </Link>
         </div>
+
+        <div>
+          <Link to='/game-kit'>
+            Testing React Game Kit
+          </Link>
+        </div>
+
       </div>
     );
   }

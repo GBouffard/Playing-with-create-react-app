@@ -13,6 +13,7 @@ import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
 import Toggleswitch from './toggle-switch'
 import MatterJs from './MatterJs';
+import GameKit from './game-kit';
 import '../public/index.css';
 
 ReactDOM.render(
@@ -79,6 +80,11 @@ ReactDOM.render(
           exact
           path="/matter-js"
           component={MatterJs}/>
+
+        <Route
+          exact
+          path="/game-kit"
+          component={GameKit}/>
 
       </Switch>
     </BrowserRouter>
