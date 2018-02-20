@@ -8,6 +8,7 @@ import Radios from './Radios';
 import DropdownMenus from './DropdownMenus';
 import AudiosAndVideos from './AudiosAndVideos';
 import Comment from './Comment';
+import Overlays from './Overlays';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
 import '../public/index.css';
 
@@ -50,6 +51,11 @@ ReactDOM.render(
           exact
           path="/comment"
           component={Comment}/>
+
+        <Route
+          exact
+          path="/overlays"
+          component={Overlays}/>
 
         <Route
           exact

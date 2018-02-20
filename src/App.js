@@ -81,13 +81,19 @@ export default class MainPage extends Component {
 
         <div>
           <Link to='/audios-and-videos'>
-            Audio and videos
+            Audio & Videos
           </Link>
         </div>
 
         <div>
           <Link to='/comment'>
-            Add comments
+            Comments
+          </Link>
+        </div>
+
+        <div>
+          <Link to='/overlays'>
+            Overlays
           </Link>
         </div>
 
