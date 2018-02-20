@@ -11,6 +11,7 @@ import Comment from './Comment';
 import Overlays from './Overlays';
 import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
+import Toggleswitch from './toggle-switch'
 import MatterJs from './MatterJs';
 import '../public/index.css';
 
@@ -68,6 +69,11 @@ ReactDOM.render(
           exact
           path="/svg-cards-animation"
           component={SVGsCardsAnimation}/>
+
+        <Route
+          exact
+          path="/toggle-switch"
+          component={Toggleswitch}/>
 
         <Route
           exact

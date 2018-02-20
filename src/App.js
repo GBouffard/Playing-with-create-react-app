@@ -110,6 +110,12 @@ export default class MainPage extends Component {
         </div>
 
         <div>
+          <Link to='/toggle-switch'>
+            Toggle switch
+          </Link>
+        </div>
+
+        <div>
           <Link to='/matter-js'>
             Testing Matter JS
           </Link>
