@@ -12,6 +12,7 @@ import Overlays from './Overlays';
 import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
 import Toggleswitch from './toggle-switch'
+import APIUses from './api-uses'
 import MatterJs from './MatterJs';
 import GameKit from './game-kit';
 import '../public/index.css';
@@ -75,6 +76,11 @@ ReactDOM.render(
           exact
           path="/toggle-switch"
           component={Toggleswitch}/>
+
+        <Route
+          exact
+          path="/api-uses"
+          component={APIUses}/>
 
         <Route
           exact
