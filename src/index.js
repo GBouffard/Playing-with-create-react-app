@@ -8,6 +8,7 @@ import Radios from './Radios';
 import DropdownMenus from './DropdownMenus';
 import AudiosAndVideos from './AudiosAndVideos';
 import Comment from './Comment';
+import PopUpBoxes from './pop-up-boxes';
 import IFrames from './iframes';
 import Overlays from './Overlays';
 import SVGs from './SVGs';
@@ -57,6 +58,11 @@ ReactDOM.render(
           exact
           path="/comment"
           component={Comment}/>
+
+        <Route
+          exact
+          path="/pop-up-boxes"
+          component={PopUpBoxes}/>
 
         <Route
           exact
