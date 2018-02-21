@@ -92,6 +92,12 @@ export default class MainPage extends Component {
         </div>
 
         <div>
+          <Link to='/iframes'>
+            Iframes
+          </Link>
+        </div>
+
+        <div>
           <Link to='/overlays'>
             Overlays
           </Link>

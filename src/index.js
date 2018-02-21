@@ -8,6 +8,7 @@ import Radios from './Radios';
 import DropdownMenus from './DropdownMenus';
 import AudiosAndVideos from './AudiosAndVideos';
 import Comment from './Comment';
+import IFrames from './iframes';
 import Overlays from './Overlays';
 import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
@@ -56,6 +57,11 @@ ReactDOM.render(
           exact
           path="/comment"
           component={Comment}/>
+
+        <Route
+          exact
+          path="/iframes"
+          component={IFrames}/>
 
         <Route
           exact
