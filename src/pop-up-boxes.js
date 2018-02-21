@@ -6,6 +6,7 @@ export default class PopUpBoxes extends Component {
     this.onAlertClick = this.onAlertClick.bind(this)
     this.onConfirmClick = this.onConfirmClick.bind(this);
     this.onPromptClick = this.onPromptClick.bind(this);
+    this.onShowChuckNorris = this.onShowChuckNorris.bind(this);
     this.state = {
       confirmValue: false,
       promptValue: null,
@@ -29,6 +30,11 @@ export default class PopUpBoxes extends Component {
       promptValue: storedValue
     })
   }
+
+  onShowChuckNorris() { 
+    const isHappyOrSad = confirm('Show Chuck Norris?') ? 'happy' : 'sad';
+    document.getElementById("myDiv").innerHTML = `<img src="../images/chuck-norris-${isHappyOrSad}.jpg">`;
+  } 
 
   render() {
     let promptVal = this.state.promptValue ? this.state.promptValue.toString() : 'null';
@@ -72,6 +78,14 @@ export default class PopUpBoxes extends Component {
           Confirm Value: {this.state.confirmValue.toString()}<br/>
           Prompt Value: {promptVal}
         </div>
+
+        <button
+          style={buttonStyle}
+          onClick={this.onShowChuckNorris}>
+          The Chuck Norris Button
+        </button> 
+
+        <div id="myDiv"></div> 
       </div>
     );
   }
