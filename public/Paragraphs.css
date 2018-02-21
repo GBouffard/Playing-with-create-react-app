@@ -1,0 +1,16 @@
+.paragraph {
+  margin: 3rem auto;
+  font-family: courier;
+  font-size: 2rem;
+  text-align: left;
+  max-width: 80%;
+}
+
+.paragraph--large {
+  font-size: 2rem;
+}
+
+.paragraph--fantasy {
+  font-family: fantasy;
+  color: deeppink;
+}
