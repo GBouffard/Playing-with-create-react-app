@@ -7,6 +7,7 @@ export default class PopUpBoxes extends Component {
     this.onConfirmClick = this.onConfirmClick.bind(this);
     this.onPromptClick = this.onPromptClick.bind(this);
     this.onShowChuckNorris = this.onShowChuckNorris.bind(this);
+    this.onEnterName = this.onEnterName.bind(this);
     this.state = {
       confirmValue: false,
       promptValue: null,
@@ -33,14 +34,28 @@ export default class PopUpBoxes extends Component {
 
   onShowChuckNorris() { 
     const isHappyOrSad = confirm('Show Chuck Norris?') ? 'happy' : 'sad';
-    document.getElementById("myDiv").innerHTML = `<img src="../images/chuck-norris-${isHappyOrSad}.jpg">`;
-  } 
+    document.getElementById("chuckNorrisDiv").innerHTML = `<img src="../images/chuck-norris-${isHappyOrSad}.jpg">`;
+  }
+
+  onEnterName() {
+    const name = prompt('Enter your name');
+    if (name) {
+      document.getElementById('myNameDiv').innerHTML = `<div>Hello ${name}!! What's up?</div>`;
+    }
+  }
 
   render() {
     let promptVal = this.state.promptValue ? this.state.promptValue.toString() : 'null';
     let buttonStyle = {
       margin:'5rem',
       background: 'yellow'
+    };
+
+    let buttonStyle2 = {
+      padding:'2rem',
+      margin: '2rem',
+      background: 'lightgreen',
+      color: 'seagreen'
     };
 
     let stateDivStyle = {
@@ -80,12 +95,20 @@ export default class PopUpBoxes extends Component {
         </div>
 
         <button
-          style={buttonStyle}
+          style={buttonStyle2}
           onClick={this.onShowChuckNorris}>
           The Chuck Norris Button
         </button> 
 
-        <div id="myDiv"></div> 
+        <div id="chuckNorrisDiv"></div>
+
+        <div id="myNameDiv"></div>
+
+        <button
+          style={buttonStyle2}
+          onClick={this.onEnterName}>
+          Enter your name prompt
+        </button>
       </div>
     );
   }
