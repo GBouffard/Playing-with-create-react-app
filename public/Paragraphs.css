@@ -14,3 +14,9 @@
   font-family: fantasy;
   color: deeppink;
 }
+
+.string-literal-example {
+  padding: 1rem 10rem;
+  background: lemonchiffon;
+  border-style: solid none none;
+}
