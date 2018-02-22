@@ -1,4 +1,5 @@
 import React from 'react';
+import {linearGradient} from 'react';
 
 const styledDiv = {
   display: 'flex'
@@ -84,6 +85,21 @@ const SVGs = () => {
             d="M25 10 L98 65 L70 25 L16 77 L11 30 L0 4 L90 50 L50 10 L11 22 L77 95 L20 25"
             fill="none"
             stroke="red" />
+        </svg>
+      </div>
+
+      <div>
+        <svg>
+          <text
+            fill="none"
+            stroke="purple"
+            fontSize="30"
+            fontWeight="bold"
+            x="150"
+            y="30"
+            textAnchor="middle">
+            STROKED TEXT
+          </text>
         </svg>
       </div>
     </div>
