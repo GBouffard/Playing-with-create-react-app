@@ -19,18 +19,20 @@ export default function List(props) {
     items,
     className,
     itemsClassName,
-    showBullets,
+    hideBullets,
     isOrdered,
+    isRoman,
     isInlined
   } = props;
 
   const listClassNames = classnames('list', className, {
-    'list--unordered': !isOrdered,
-    'list--show-bullets': showBullets,
+    'list--numbered': isOrdered,
+    'list--roman': isRoman,
+    'list--hide-bullets': hideBullets,
     'list--inline': isInlined
   });
 
-  const tag = isOrdered ? 'ol' : 'ul';
+  const tag = isOrdered || isRoman ? 'ol' : 'ul';
 
   return React.createElement(tag, { className: listClassNames }, renderItems(items, itemsClassName));
 }
@@ -41,7 +43,8 @@ List.propTypes = {
   ).isRequired,
   className: PropTypes.string,
   itemsClassName: PropTypes.string,
-  showBullets: PropTypes.bool,
+  hideBullets: PropTypes.bool,
   isOrdered: PropTypes.bool,
+  isRoman: PropTypes.bool,
   isInlined: PropTypes.bool
 };

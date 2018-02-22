@@ -1,2 +1,28 @@
 .list {
+  margin: 0;
+  padding: 2rem;
+  list-style-position: inside;
+  background: floralwhite;
+  color: blueviolet;
+  border: .5rem cornsilk solid;
+}
+
+.list--inline {
+  display: inline-block;
+}
+
+.list--hide-bullets {
+  list-style-type: none;
+}
+
+/* list-style-type allow to pass different types of bulletpoints such as
+disc | circle | square | decimal | lower-roman | upper-roman | lower-greek and many more...
+*/
+
+.list--ordered {
+  list-style-type: decimal;
+}
+
+.list--roman {
+  list-style-type: upper-roman;
 }
