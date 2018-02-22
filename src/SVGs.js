@@ -49,6 +49,43 @@ const SVGs = () => {
             fill="red" />
         </svg>
       </div>
+
+      <div
+        style={styledDiv}>
+
+        <svg>
+          <line
+            x1={0}
+            y1={0}
+            x2={100}
+            y2={50}
+            stroke="navy"
+            strokeWidth={2} />
+        </svg>
+
+        <svg>
+          <polygon
+            points="40,5 70,80 25,95"
+            fill="lime"
+            stroke="purple"
+            strokeWidth={1} />
+        </svg>
+
+        <svg>
+          <polyline
+            points="10,10 20,12 30,20 40,60 60,70 95,90"
+            fill="none"
+            stroke="black"
+            strokeWidth="3"/>
+        </svg>
+
+        <svg>
+          <path
+            d="M25 10 L98 65 L70 25 L16 77 L11 30 L0 4 L90 50 L50 10 L11 22 L77 95 L20 25"
+            fill="none"
+            stroke="red" />
+        </svg>
+      </div>
     </div>
   );
 }
