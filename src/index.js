@@ -10,7 +10,6 @@ import AudiosAndVideos from './AudiosAndVideos';
 import Comment from './Comment';
 import PopUpBoxes from './pop-up-boxes';
 import IFrames from './iframes';
-import Overlays from './Overlays';
 import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
 import Toggleswitch from './toggle-switch'
@@ -68,11 +67,6 @@ ReactDOM.render(
           exact
           path="/iframes"
           component={IFrames}/>
-
-        <Route
-          exact
-          path="/overlays"
-          component={Overlays}/>
 
         <Route
           exact

@@ -104,12 +104,6 @@ export default class MainPage extends Component {
         </div>
 
         <div>
-          <Link to='/overlays'>
-            Overlays
-          </Link>
-        </div>
-
-        <div>
           <Link to='/svgs'>
             SVGs
           </Link>
