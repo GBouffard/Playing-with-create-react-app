@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
 import InputFields from './InputFields';
 import Paragraphs from './Paragraphs';
+import Lists from './Lists';
 import Radios from './Radios';
 import DropdownMenus from './DropdownMenus';
 import AudiosAndVideos from './AudiosAndVideos';
@@ -37,6 +38,11 @@ ReactDOM.render(
           exact
           path="/input-fields"
           component={InputFields}/>
+
+        <Route
+          exact
+          path="/lists"
+          component={Lists}/>
 
         <Route
           exact

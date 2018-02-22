@@ -68,6 +68,12 @@ export default class MainPage extends Component {
         </div>
 
         <div>
+          <Link to='/lists'>
+            Lists
+          </Link>
+        </div>
+
+        <div>
           <Link to='/radios'>
             Radios
           </Link>
