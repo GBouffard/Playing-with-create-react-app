@@ -18,6 +18,7 @@ import CSSPositioning from './css-positioning'
 import ResponsiveDesign from './responsive-design'
 import Accessibility from './accessibility'
 import APIUses from './api-uses'
+import Analytics from './analytics';
 import MatterJs from './MatterJs';
 import GameKit from './game-kit';
 import '../public/index.css';
@@ -111,6 +112,11 @@ ReactDOM.render(
           exact
           path="/api-uses"
           component={APIUses}/>
+
+        <Route
+          exact
+          path="/analytics"
+          component={Analytics}/>
 
         <Route
           exact

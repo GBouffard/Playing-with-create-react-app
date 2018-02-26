@@ -152,6 +152,12 @@ export default class MainPage extends Component {
         </div>
 
         <div>
+          <Link to='/analytics'>
+            Analytics
+          </Link>
+        </div>
+
+        <div>
           <Link to='/matter-js'>
             Testing Matter JS
           </Link>
