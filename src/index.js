@@ -14,6 +14,7 @@ import IFrames from './iframes';
 import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
 import Toggleswitch from './toggle-switch'
+import CSSPositioning from './css-positioning'
 import ResponsiveDesign from './responsive-design'
 import Accessibility from './accessibility'
 import APIUses from './api-uses'
@@ -90,6 +91,11 @@ ReactDOM.render(
           exact
           path="/toggle-switch"
           component={Toggleswitch}/>
+
+        <Route
+          exact
+          path="/css-positioning"
+          component={CSSPositioning}/>
 
         <Route
           exact

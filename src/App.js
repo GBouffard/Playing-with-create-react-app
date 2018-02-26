@@ -128,8 +128,14 @@ export default class MainPage extends Component {
         </div>
 
         <div>
+          <Link to='/css-positioning'>
+            CSS Positioning
+          </Link>
+        </div>
+
+        <div>
           <Link to='/responsive-design'>
-            Responsive design
+            Responsive & Adaptive designs
           </Link>
         </div>
 
