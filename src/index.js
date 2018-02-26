@@ -15,6 +15,7 @@ import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
 import Toggleswitch from './toggle-switch'
 import ResponsiveDesign from './responsive-design'
+import Accessibility from './accessibility'
 import APIUses from './api-uses'
 import MatterJs from './MatterJs';
 import GameKit from './game-kit';
@@ -94,6 +95,11 @@ ReactDOM.render(
           exact
           path="/responsive-design"
           component={ResponsiveDesign}/>
+
+        <Route
+          exact
+          path="/accessibility"
+          component={Accessibility}/>
 
         <Route
           exact

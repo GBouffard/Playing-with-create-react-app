@@ -134,6 +134,12 @@ export default class MainPage extends Component {
         </div>
 
         <div>
+          <Link to='/accessibility'>
+            Accessibility
+          </Link>
+        </div>
+
+        <div>
           <Link to='/api-uses'>
             Using APIs
           </Link>
