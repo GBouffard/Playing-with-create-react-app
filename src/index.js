@@ -14,6 +14,7 @@ import IFrames from './iframes';
 import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
 import Toggleswitch from './toggle-switch'
+import ResponsiveDesign from './responsive-design'
 import APIUses from './api-uses'
 import MatterJs from './MatterJs';
 import GameKit from './game-kit';
@@ -88,6 +89,11 @@ ReactDOM.render(
           exact
           path="/toggle-switch"
           component={Toggleswitch}/>
+
+        <Route
+          exact
+          path="/responsive-design"
+          component={ResponsiveDesign}/>
 
         <Route
           exact

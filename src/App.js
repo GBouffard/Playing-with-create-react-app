@@ -128,6 +128,12 @@ export default class MainPage extends Component {
         </div>
 
         <div>
+          <Link to='/responsive-design'>
+            Responsive design
+          </Link>
+        </div>
+
+        <div>
           <Link to='/api-uses'>
             Using APIs
           </Link>
