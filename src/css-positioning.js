@@ -4,6 +4,10 @@ import floatingDuck from '../public/images/floating_duck.jpg';
 const CSSPositioning = () => {
   return (
     <div>
+      <h3>
+        position: static / relative / absolute / fixed / sticky
+      </h3>
+
       <div
         className="positioning positioning--static">
         This div's position is static (default value)<br/>
@@ -43,7 +47,10 @@ const CSSPositioning = () => {
       </div>
 
       <br/>
-      <br/>
+      <h3>
+        float: left / right
+      </h3>
+
       <div
         className="positioning positioning--float">
         This div is a float (float: right)<br/>
@@ -61,6 +68,10 @@ const CSSPositioning = () => {
         In its simplest use, the float property can be used to wrap text around images. In this example the floating duck is on the right but it can be moved on the left with float: left.
       </div>
 
+      <h3>
+        z-index
+      </h3>
+
       <div
         className="positioning-z-index positioning--absolute positioning--z-index-1">
         A position absolute div...by default under the next div<br/>
@@ -73,11 +84,17 @@ const CSSPositioning = () => {
         z-index will only work on an element whose position property has been explicitly set to absolute, fixed, or relative. 
       </div>
 
-      <br/>
-      Still to come: <br/>
-      - Box Model<br/>
-      - inline vs inline-block<br/>
-      - div style="clear:both; / Clearfix method / overflow: auto or overflow: hidden<br/>
+      <h3>
+        the box-model
+      </h3>
+
+      <h3>
+        inline vs inline-block
+      </h3>
+
+      <h3>
+        div style="clear:both; / Clearfix method / overflow: auto or overflow: hidden
+      </h3>
     </div>
   );
 }
