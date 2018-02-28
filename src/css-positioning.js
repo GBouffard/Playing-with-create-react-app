@@ -37,8 +37,15 @@ const CSSPositioning = () => {
 
       <br/>
       <br/>
+      <div
+        className="positioning positioning--float">
+        This div is a float (float: right)<br/>
+        (within the normal document flow)<br/>
+        affects the position of other elements
+        </div>
+      <br/>
+      <br/>
       Still to come: <br/>
-      - float<br/>
       - z-index<br/>
       - Box Model<br/>
       - inline vs inline-block<br/>
