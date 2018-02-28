@@ -24,6 +24,12 @@ const CSSPositioning = () => {
       </div>
 
       <div
+        className="positioning positioning--absolute">
+        A second absolute positionned div will be a the same position as the previous div.<br/>
+        it's positionned after the last element within the document flow
+      </div>
+
+      <div
         className="positioning positioning--fixed">
         This div's position is fixed (similar to absolute HOWEVER unaffected by scrolling)<br/>
         OUT of the document flow<br/>
@@ -55,7 +61,6 @@ const CSSPositioning = () => {
         In its simplest use, the float property can be used to wrap text around images. In this example the floating duck is on the right but it can be moved on the left with float: left.
       </div>
 
-              
       <br/>
       Still to come: <br/>
       - z-index<br/>
