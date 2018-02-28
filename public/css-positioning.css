@@ -44,3 +44,16 @@
 .positioning--floating-duck {
   float: right;
 }
+
+.positioning-z-index {
+  color: honeydew;
+  background-color: gray;
+  font-size: 1rem;
+  padding: .5rem;
+  margin: .25rem .5rem;
+  border: .25rem double;
+}
+
+.positioning--z-index-1 {
+  z-index: 1;
+}
