@@ -6,3 +6,23 @@
   margin: .5rem;
   border: .25rem solid crimson;
 }
+
+.positioning--static {
+  position: static;
+}
+
+.positioning--relative {
+  position: relative;
+}
+
+.positioning--absolute {
+  position: absolute;
+}
+
+.positioning--fixed {
+  position: fixed;
+}
+
+.positioning--sticky {
+  position: sticky;
+}
