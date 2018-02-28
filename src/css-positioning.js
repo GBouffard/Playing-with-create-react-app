@@ -88,6 +88,14 @@ const CSSPositioning = () => {
         the box-model
       </h3>
 
+      <div>
+        <div
+          className="positioning positioning--box-model">
+          Box model div<br/>
+          box-sizing: border-box / content-box
+        </div>
+      </div>
+
       <h3>
         inline vs inline-block
       </h3>

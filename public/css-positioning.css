@@ -57,3 +57,13 @@
 .positioning--z-index-1 {
   z-index: 1;
 }
+
+.positioning--box-model {
+  box-sizing: border-box; 
+  color: greenyellow;
+  background-color: seagreen; 
+  font-size: 1rem;
+  padding: 1.5rem;
+  margin: .5rem 2rem;
+  border: .125rem solid springgreen;
+}
