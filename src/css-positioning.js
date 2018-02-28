@@ -3,8 +3,34 @@ import React from 'react';
 const CSSPositioning = () => {
   return (
     <div>
+      <div
+        className="positioning positioning--static">
+        This div's position is static
+      </div>
+
+      <div
+        className="positioning positioning--relative">
+        This div's position is relative
+      </div>
+
+      <div
+        className="positioning positioning--absolute">
+        This div's position is absolute
+      </div>
+
+      <div
+        className="positioning positioning--fixed">
+        This div's position is fixed
+      </div>
+
+      <div
+        className="positioning positioning--sticky">
+        This div's position is sticky
+      </div>
+
+      <br/>
+      <br/>
       Still to come: <br/>
-      - absolute static relative positions
       - float<br/>
       - z-index<br/>
       - Box Model<br/>
