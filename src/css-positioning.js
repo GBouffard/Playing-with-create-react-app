@@ -1,4 +1,5 @@
 import React from 'react';
+import floatingDuck from '../public/images/floating_duck.jpg';
 
 const CSSPositioning = () => {
   return (
@@ -41,9 +42,20 @@ const CSSPositioning = () => {
         className="positioning positioning--float">
         This div is a float (float: right)<br/>
         (within the normal document flow)<br/>
-        affects the position of other elements
+        Can be left / right / none / inherit<br/>
+        affects the position of other elements<br/>
         </div>
       <br/>
+
+      <div
+        className="positioning--float-example-div">
+        <img
+          className="positioning--floating-duck"
+          src={floatingDuck} />
+        In its simplest use, the float property can be used to wrap text around images. In this example the floating duck is on the right but it can be moved on the left with float: left.
+      </div>
+
+              
       <br/>
       Still to come: <br/>
       - z-index<br/>

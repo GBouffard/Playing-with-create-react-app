@@ -33,3 +33,14 @@
   border: .25rem solid darkviolet;
   float: right;
 }
+
+.positioning--float-example-div {
+  margin: 0 auto;
+  height: 120px;
+  max-width: 25rem;
+  border: 1px solid;
+}
+
+.positioning--floating-duck {
+  float: right;
+}
