@@ -10,13 +10,20 @@ const ResponsiveDesign = () => {
       <img
         className="responsive-design"/>
 
+      <div
+        className="responsive-div">
+        Other media queries include:<br/>
+        orientation: landscape / Retina graphics / aspect-ratio / resolution and more
+      </div>
+
       <h3>
         Adaptive Design:
       </h3>
 
-      <h3>
-        Retina graphics Design:
-      </h3>
+      <div
+        className="responsive-div">
+        Need to to try modernizr browser detection
+      </div>
 
       <h3>
         - even if not CSS, html lang="en"
