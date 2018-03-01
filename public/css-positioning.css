@@ -83,3 +83,8 @@
 .positioning--inline-block-parent {
   width: 40rem;
 }
+
+.positioning--clearing {
+  clear: both;
+  overflow: auto;
+}

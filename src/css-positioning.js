@@ -112,8 +112,21 @@ const CSSPositioning = () => {
       </div>
 
       <h3>
-        div style="clear:both; / Clearfix method / overflow: auto or overflow: hidden
+        Clearing
       </h3>
+
+      <div>
+        <img
+          className="positioning--floating-duck"
+          src={floatingDuck} />
+        <div
+          className="positioning positioning--clearing">
+          clear:both<br/>
+          To not allow floating elements on the left or the right side<br/>
+          overflow: auto / overlay / hidden also work<br/>
+          overflow specifies what happens if content overflows an element box
+        </div>
+      </div>
     </div>
   );
 }
