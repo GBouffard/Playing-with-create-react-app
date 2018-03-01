@@ -7,7 +7,8 @@ const ResponsiveDesign = () => {
         Responsive Design:
       </h3>
 
-      <img className="responsive-design"/>
+      <img
+        className="responsive-design"/>
 
       <h3>
         Adaptive Design:
