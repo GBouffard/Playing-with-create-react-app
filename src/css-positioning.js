@@ -61,7 +61,7 @@ const CSSPositioning = () => {
       <br/>
 
       <div
-        className="positioning--float-example-div">
+        className="positioning--parent-container positioning--parent-float">
         <img
           className="positioning--floating-duck"
           src={floatingDuck} />
@@ -99,6 +99,17 @@ const CSSPositioning = () => {
       <h3>
         inline vs inline-block
       </h3>
+
+      <div
+        className="positioning--parent-container positioning--inline-block-parent">
+        <div
+          className="positioning--inline-block">
+          display: block takes the full width of its parent<br/>
+          inline and inline-block's width depends on content<br/>
+          inline-block treats width as a block. inline treats each sub-content' width individually<br/>
+          Also; with inline VERTICAL (and not horizontal) margins and paddings appear around the content.
+        </div>
+      </div>
 
       <h3>
         div style="clear:both; / Clearfix method / overflow: auto or overflow: hidden

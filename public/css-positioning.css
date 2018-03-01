@@ -34,11 +34,14 @@
   float: right;
 }
 
-.positioning--float-example-div {
+.positioning--parent-container {
   margin: 0 auto;
   height: 120px;
-  max-width: 25rem;
   border: 1px solid;
+}
+
+.positioning--parent-float {
+  max-width: 25rem;
 }
 
 .positioning--floating-duck {
@@ -66,4 +69,17 @@
   padding: 1.5rem;
   margin: .5rem 2rem;
   border: .125rem solid springgreen;
+}
+
+.positioning--inline-block {
+  display: block;
+  color: snow;
+  background-color: tomato; 
+  font-size: .8rem;
+  padding: .5rem;
+  border: .25rem solid sienna;
+}
+
+.positioning--inline-block-parent {
+  width: 40rem;
 }
