@@ -20,3 +20,8 @@
   border: .25rem solid lightskyblue;
   border-radius: .5rem;
 }
+
+.height-width-zero {
+  height: 0;
+  width: 0;
+}
