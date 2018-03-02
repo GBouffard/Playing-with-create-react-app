@@ -10,3 +10,13 @@
 .visibility-hidden {
   visibility: hidden;
 }
+
+.accessibility-div {
+  color: midnightblue;
+  background-color: lightblue; 
+  font-size: .8rem;
+  padding: .5rem;
+  margin: 0 5rem;
+  border: .25rem solid lightskyblue;
+  border-radius: .5rem;
+}
