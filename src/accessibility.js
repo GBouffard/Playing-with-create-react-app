@@ -9,14 +9,19 @@ const Accessibility = () => {
 
       <textarea
         className="height-width-zero">
-        this textarea with width zero and height zero is being read because it's there but it doesn't appear on the page.
+        this textarea with width zero and height zero is being read because it's detected but not visible on the page.
+      </textarea>
+
+      <textarea
+        className="outside-of-the-screen">
+        this textarea with width position absolute and left minus nine nine nine nine nine pixels is being read because it's detected but not visible on the page.
       </textarea>
 
       <div
-        className="accessibility">
+        className="accessibility-div">
           Accessible Form Controls: 
           - Text inputs - Textareas - Checkboxes - Radio buttons - Select menus - Buttons - Image buttons - JavaScript jump menus
-          <br/><br/>div and spans are not!
+          <br/><br/><b>div and spans are not!</b>
       </div>
 
       <textarea

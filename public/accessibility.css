@@ -25,3 +25,8 @@
   height: 0;
   width: 0;
 }
+
+.outside-of-the-screen {
+  position: absolute;
+  left: -99999px
+}
