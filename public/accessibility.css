@@ -1,0 +1,8 @@
+.accessibility {
+  color: darkmagenta;
+  background-color: yellow; 
+  font-size: 1rem;
+  padding: .5rem;
+  margin: .5rem;
+  border: .5rem solid blueviolet;
+}
