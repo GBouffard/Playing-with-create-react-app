@@ -6,3 +6,7 @@
   margin: .5rem;
   border: .5rem solid blueviolet;
 }
+
+.visibility-hidden {
+  visibility: hidden;
+}
