@@ -25,8 +25,8 @@ export default class Button extends React.Component {
 }
 
 Button.propTypes = {
-  onClick: React.PropTypes.func.isRequired,
   text: React.PropTypes.string.isRequired,
+  onClick: React.PropTypes.func,
   className: React.PropTypes.string,
   id: React.PropTypes.string
 }

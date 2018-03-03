@@ -1,0 +1,21 @@
+.giphy-image {
+  display: block;
+  margin: 1rem auto;
+  border: .25rem solid lightslategrey;
+}
+
+.giphy-api-input {
+  background-color: floralwhite;
+  border: .1rem solid darkorange;
+  margin: 1rem;
+}
+
+.giphy-api-button {
+  color: floralwhite;
+  background-color: darkorange; 
+  font-weight: bold;
+  font-size: .8rem;
+  margin: 1rem;
+  border: .25rem solid tomato;
+  border-radius: .25rem;
+}
