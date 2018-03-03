@@ -58,122 +58,162 @@ export default class MainPage extends Component {
         <div
           className="App-grid">
           <div>
-            <Link to='/paragraphs'>
+            <Link
+              className="App-grid__link"
+              to='/paragraphs'>
               Paragraphs
             </Link>
           </div>
 
           <div>
-            <Link to='/input-fields'>
+            <Link
+              className="App-grid__link"
+              to='/input-fields'>
               Input fields
             </Link>
           </div>
 
           <div>
-            <Link to='/lists'>
+            <Link
+              className="App-grid__link"
+              to='/lists'>
               Lists
             </Link>
           </div>
 
           <div>
-            <Link to='/radios'>
+            <Link
+              className="App-grid__link"
+              to='/radios'>
               Radios
             </Link>
           </div>
 
           <div>
-            <Link to='/dropdown-menus'>
+            <Link
+              className="App-grid__link"
+              to='/dropdown-menus'>
               Dropdown Menus
             </Link>
           </div>
 
           <div>
-            <Link to='/audios-and-videos'>
+            <Link
+              className="App-grid__link"
+              to='/audios-and-videos'>
               Audio & Videos
             </Link>
           </div>
 
           <div>
-            <Link to='/comment'>
+            <Link
+              className="App-grid__link"
+              to='/comment'>
               Comments
             </Link>
           </div>
 
           <div>
-            <Link to='/pop-up-boxes'>
+            <Link
+              className="App-grid__link"
+              to='/pop-up-boxes'>
               Pop-up boxes
             </Link>
           </div>
 
           <div>
-            <Link to='/iframes'>
+            <Link
+              className="App-grid__link"
+              to='/iframes'>
               Iframes
             </Link>
           </div>
 
           <div>
-            <Link to='/svgs'>
+            <Link
+              className="App-grid__link"
+              to='/svgs'>
               SVGs
             </Link>
           </div>
 
           <div>
-            <Link to='/svg-cards-animation'>
+            <Link
+              className="App-grid__link"
+              to='/svg-cards-animation'>
               SVGs cards animation
             </Link>
           </div>
 
           <div>
-            <Link to='/toggle-switch'>
+            <Link
+              className="App-grid__link"
+              to='/toggle-switch'>
               Toggle switch
             </Link>
           </div>
 
           <div>
-            <Link to='/css-positioning'>
+            <Link
+              className="App-grid__link"
+              to='/css-positioning'>
               CSS Positioning
             </Link>
           </div>
 
           <div
             className="bigger-grid-item">
-            <Link to='/responsive-design'>
+            <Link
+              className="App-grid__link"
+              to='/responsive-design'>
               Responsive & Adaptive designs
             </Link>
           </div>
 
           <div>
-            <Link to='/accessibility'>
+            <Link
+              className="App-grid__link"
+              to='/accessibility'>
               Accessibility
             </Link>
           </div>
 
           <div>
-            <Link to='/api-uses'>
+            <Link
+              className="App-grid__link"
+              to='/api-uses'>
               Using APIs
             </Link>
           </div>
 
           <div>
-            <Link to='/analytics'>
+            <Link
+              className="App-grid__link"
+              to='/analytics'>
               Analytics
             </Link>
           </div>
 
           <div>
-            <Link to='/matter-js'>
+            <Link
+              className="App-grid__link"
+              to='/matter-js'>
               Testing Matter JS
             </Link>
           </div>
 
           <div>
-            <Link to='/game-kit'>
+            <Link
+              className="App-grid__link"
+              to='/game-kit'>
               Testing React Game Kit
             </Link>
           </div>
 
           <div>
-            <Link to='/random'>
+            <Link
+              className="App-grid__link"
+              to='/random'>
               Random stuff
             </Link>
           </div>

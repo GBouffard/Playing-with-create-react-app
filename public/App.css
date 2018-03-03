@@ -32,15 +32,16 @@
 
 .App-grid > div {
   background-color: aliceblue;
-  padding: .5rem 0;
 }
 
 .App-grid > div:hover {
   background-color: lightblue;
 }
 
-.App-grid > div > Link {
+.App-grid__link {
   text-decoration: none;
+  display: block;
+  padding: .5rem;
 }
 
 .bigger-grid-item {
