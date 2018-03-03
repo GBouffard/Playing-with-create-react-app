@@ -21,6 +21,7 @@ import APIUses from './api-uses'
 import Analytics from './analytics';
 import MatterJs from './MatterJs';
 import GameKit from './game-kit';
+import Random from './random';
 import '../public/index.css';
 
 ReactDOM.render(
@@ -127,6 +128,11 @@ ReactDOM.render(
           exact
           path="/game-kit"
           component={GameKit}/>
+
+        <Route
+          exact
+          path="/random"
+          component={Random}/>
 
       </Switch>
     </BrowserRouter>

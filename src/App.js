@@ -169,6 +169,12 @@ export default class MainPage extends Component {
           </Link>
         </div>
 
+        <div>
+          <Link to='/random'>
+            Random stuff
+          </Link>
+        </div>
+
       </div>
     );
   }
