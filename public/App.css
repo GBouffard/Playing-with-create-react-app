@@ -35,6 +35,14 @@
   padding: .5rem 0;
 }
 
+.App-grid > div:hover {
+  background-color: lightblue;
+}
+
+.App-grid > div > Link {
+  text-decoration: none;
+}
+
 .bigger-grid-item {
   grid-column-start: 2; /* inclusive */
   grid-column-end: 4; /* exclusive - in columns 2 & 3 */
