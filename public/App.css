@@ -24,6 +24,18 @@
 .App-grid {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-gap: 1rem .5rem; /* shorthand property for grid-column-gap and grid-row-gap */
-  margin: 2rem .5rem;
+  grid-gap: .5rem; /* shorthand property for grid-column-gap and grid-row-gap */
+  background-color: darkslateblue;
+  margin-top: 1rem;
+  padding: .5rem;
+}
+
+.App-grid > div {
+  background-color: aliceblue;
+  padding: .5rem 0;
+}
+
+.bigger-grid-item {
+  grid-column-start: 2; /* inclusive */
+  grid-column-end: 4; /* exclusive - in columns 2 & 3 */
 }

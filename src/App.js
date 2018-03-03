@@ -135,7 +135,8 @@ export default class MainPage extends Component {
             </Link>
           </div>
 
-          <div>
+          <div
+            className="bigger-grid-item">
             <Link to='/responsive-design'>
               Responsive & Adaptive designs
             </Link>
