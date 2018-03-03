@@ -20,3 +20,10 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.App-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 1rem .5rem; /* shorthand property for grid-column-gap and grid-row-gap */
+  margin: 2rem .5rem;
+}

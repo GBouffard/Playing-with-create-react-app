@@ -55,126 +55,129 @@ export default class MainPage extends Component {
             onClick={this.onChangeLanguageClick} />
         </div>
 
-        <div>
-          <Link to='/paragraphs'>
-            Paragraphs
-          </Link>
-        </div>
+        <div
+          className="App-grid">
+          <div>
+            <Link to='/paragraphs'>
+              Paragraphs
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/input-fields'>
-            Input fields
-          </Link>
-        </div>
+          <div>
+            <Link to='/input-fields'>
+              Input fields
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/lists'>
-            Lists
-          </Link>
-        </div>
+          <div>
+            <Link to='/lists'>
+              Lists
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/radios'>
-            Radios
-          </Link>
-        </div>
+          <div>
+            <Link to='/radios'>
+              Radios
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/dropdown-menus'>
-            Dropdown Menus
-          </Link>
-        </div>
+          <div>
+            <Link to='/dropdown-menus'>
+              Dropdown Menus
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/audios-and-videos'>
-            Audio & Videos
-          </Link>
-        </div>
+          <div>
+            <Link to='/audios-and-videos'>
+              Audio & Videos
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/comment'>
-            Comments
-          </Link>
-        </div>
+          <div>
+            <Link to='/comment'>
+              Comments
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/pop-up-boxes'>
-            Pop-up boxes
-          </Link>
-        </div>
+          <div>
+            <Link to='/pop-up-boxes'>
+              Pop-up boxes
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/iframes'>
-            Iframes
-          </Link>
-        </div>
+          <div>
+            <Link to='/iframes'>
+              Iframes
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/svgs'>
-            SVGs
-          </Link>
-        </div>
+          <div>
+            <Link to='/svgs'>
+              SVGs
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/svg-cards-animation'>
-            SVGs cards animation
-          </Link>
-        </div>
+          <div>
+            <Link to='/svg-cards-animation'>
+              SVGs cards animation
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/toggle-switch'>
-            Toggle switch
-          </Link>
-        </div>
+          <div>
+            <Link to='/toggle-switch'>
+              Toggle switch
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/css-positioning'>
-            CSS Positioning
-          </Link>
-        </div>
+          <div>
+            <Link to='/css-positioning'>
+              CSS Positioning
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/responsive-design'>
-            Responsive & Adaptive designs
-          </Link>
-        </div>
+          <div>
+            <Link to='/responsive-design'>
+              Responsive & Adaptive designs
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/accessibility'>
-            Accessibility
-          </Link>
-        </div>
+          <div>
+            <Link to='/accessibility'>
+              Accessibility
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/api-uses'>
-            Using APIs
-          </Link>
-        </div>
+          <div>
+            <Link to='/api-uses'>
+              Using APIs
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/analytics'>
-            Analytics
-          </Link>
-        </div>
+          <div>
+            <Link to='/analytics'>
+              Analytics
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/matter-js'>
-            Testing Matter JS
-          </Link>
-        </div>
+          <div>
+            <Link to='/matter-js'>
+              Testing Matter JS
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/game-kit'>
-            Testing React Game Kit
-          </Link>
-        </div>
+          <div>
+            <Link to='/game-kit'>
+              Testing React Game Kit
+            </Link>
+          </div>
 
-        <div>
-          <Link to='/random'>
-            Random stuff
-          </Link>
-        </div>
+          <div>
+            <Link to='/random'>
+              Random stuff
+            </Link>
+          </div>
 
+        </div>
       </div>
     );
   }
