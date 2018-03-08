@@ -13,6 +13,7 @@ import PopUpBoxes from './pop-up-boxes';
 import IFrames from './iframes';
 import SVGs from './SVGs';
 import SVGsCardsAnimation from './SVGsCardsAnimation';
+import Canvas from './canvas'
 import Toggleswitch from './toggle-switch'
 import CSSPositioning from './css-positioning'
 import ResponsiveDesign from './responsive-design'
@@ -88,6 +89,11 @@ ReactDOM.render(
           exact
           path="/svg-cards-animation"
           component={SVGsCardsAnimation}/>
+
+        <Route
+          exact
+          path="/canvas"
+          component={Canvas}/>
 
         <Route
           exact

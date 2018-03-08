@@ -148,6 +148,14 @@ export default class MainPage extends Component {
           <div>
             <Link
               className="App-grid__link"
+              to='/canvas'>
+              Canvas
+            </Link>
+          </div>
+
+          <div>
+            <Link
+              className="App-grid__link"
               to='/toggle-switch'>
               Toggle switch
             </Link>
@@ -234,5 +242,19 @@ export default class MainPage extends Component {
       greeting: this.state.greeting === "Hello" ? "Bonjour" : "Hello",
       buttonText: this.state.greeting === "Hello" ? "Englishfy" : "Frenchify"
     });
-  }
+  } 
 }
+
+window.onload = () => {
+  console.log("window.onload: fully-loaded page");
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  console.log("DOMContentLoaded: DOM hierarchy constructed / no image or anything...");
+});
+
+document.onreadystatechange = () => {
+  console.log(document.readyState);
+};
+
+
