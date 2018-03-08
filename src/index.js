@@ -19,6 +19,7 @@ import CSSPositioning from './css-positioning'
 import ResponsiveDesign from './responsive-design'
 import Accessibility from './accessibility'
 import APIUses from './api-uses'
+import Security from './security';
 import Analytics from './analytics';
 import MatterJs from './MatterJs';
 import GameKit from './game-kit';
@@ -119,6 +120,11 @@ ReactDOM.render(
           exact
           path="/api-uses"
           component={APIUses}/>
+
+        <Route
+          exact
+          path="/security"
+          component={Security}/>
 
         <Route
           exact

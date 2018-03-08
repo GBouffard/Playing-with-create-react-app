@@ -197,6 +197,14 @@ export default class MainPage extends Component {
           <div>
             <Link
               className="App-grid__link"
+              to='/security'>
+              Security and XSS
+            </Link>
+          </div>
+
+          <div>
+            <Link
+              className="App-grid__link"
               to='/analytics'>
               Analytics
             </Link>
