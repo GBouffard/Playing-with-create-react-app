@@ -45,6 +45,6 @@
 }
 
 .bigger-grid-item {
-  grid-column-start: 2; /* inclusive */
-  grid-column-end: 4; /* exclusive - in columns 2 & 3 */
+  grid-column-start: 3; /* inclusive */
+  grid-column-end: 5; /* exclusive - in columns 2 & 3 */
 }

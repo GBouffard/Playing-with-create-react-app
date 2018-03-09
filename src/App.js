@@ -229,6 +229,14 @@ export default class MainPage extends Component {
           <div>
             <Link
               className="App-grid__link"
+              to='/virtual-reality'>
+              Virtual reality
+            </Link>
+          </div>
+
+          <div>
+            <Link
+              className="App-grid__link"
               to='/random'>
               Random stuff
             </Link>

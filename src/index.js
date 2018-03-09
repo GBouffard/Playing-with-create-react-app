@@ -23,6 +23,7 @@ import Security from './security';
 import Analytics from './analytics';
 import MatterJs from './MatterJs';
 import GameKit from './game-kit';
+import VirtualReality from './virtual-reality'
 import Random from './random';
 import '../public/index.css';
 
@@ -140,6 +141,11 @@ ReactDOM.render(
           exact
           path="/game-kit"
           component={GameKit}/>
+
+        <Route
+          exact
+          path="/virtual-reality"
+          component={VirtualReality}/>
 
         <Route
           exact
