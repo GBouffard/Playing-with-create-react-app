@@ -45,6 +45,23 @@ const ResponsiveDesign = () => {
     }
   `;
 
+  const InitialDiv = ({ className, children}) => (
+    <div
+      className={className}>
+      {children}
+    </div>
+  );
+
+  const StyledDiv = styled(InitialDiv)`
+    display: block;
+    margin: 1rem auto;
+    width: 600px;
+    text-align: center;
+    background: seashell;
+    padding: .2rem;
+    border: .2rem dotted darkgray;
+  `;
+
   return (
     <div>
       <h3>
@@ -78,6 +95,10 @@ const ResponsiveDesign = () => {
       <StyledSectionExample>
         Using styled component, background color will change on breakpoints.
       </StyledSectionExample>
+
+      <StyledDiv>
+        just styling a React component through styled component
+      </StyledDiv>
 
       <h3>
         Adaptive Design:
