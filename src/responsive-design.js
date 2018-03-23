@@ -15,6 +15,7 @@ const ResponsiveDesign = () => {
   const basketballImage = (
     <img
       className="basketball-image"
+      alt="this is a basketball icon"
       src="./images/basketball.png" />
   );
 
@@ -62,6 +63,47 @@ const ResponsiveDesign = () => {
     border: .2rem dotted darkgray;
   `;
 
+  const breakpoints = {
+    small: {
+      breakpoint: '(max-width: 600px)',
+      number: 1
+    },
+    medium: {
+      breakpoint: '(min-width: 601px) and (max-width: 768px)',
+      number: 2
+    },
+    'column-layout-width': {
+      breakpoint: '(min-width: 769px) and (max-width: 920px)',
+      number: 3
+    },
+    'medium-large': {
+      breakpoint: '(min-width: 921px) and (max-width: 1024px)',
+      number: 4
+    },
+    large: {
+      breakpoint: '(min-width: 1025px)',
+      number: 5
+    }
+  };
+
+  const makeReactResponsiveExample = () => {
+    return Object.keys(breakpoints).map((reference, index) => {
+
+      return (
+        <MediaQuery
+          key={index}
+          query={breakpoints[`${reference}`].breakpoint} >
+          <div
+            className="react-responsive-examples" >
+            {breakpoints[`${reference}`].number}
+          </div>
+        </MediaQuery>
+      );
+    });
+  };
+
+  const reactResponsiveElement = makeReactResponsiveExample();
+
   return (
     <div>
       <h3>
@@ -87,6 +129,11 @@ const ResponsiveDesign = () => {
           return (matches) ? reactResponsiveDiv : basketballImage;
         }}
       </MediaQuery>
+      
+      <p>
+        Counting using react responsive as an example (and using query):
+      </p>
+      {reactResponsiveElement}
 
       <h3>
         Responsive Design - Using Styled components:
