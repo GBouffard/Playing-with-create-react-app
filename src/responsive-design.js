@@ -1,5 +1,6 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
+import styled from 'styled-components';
 
 const ResponsiveDesign = () => {
   const reactResponsiveDiv = (
@@ -16,6 +17,33 @@ const ResponsiveDesign = () => {
       className="basketball-image"
       src="./images/basketball.png" />
   );
+
+  const StyledSectionExample = styled.section`
+    display: flex;
+    padding: .5rem;
+    width: 400px;
+    font-size: .7rem;
+    margin: 0 auto;
+    background: lightgoldenrodyellow;
+    color: saddlebrown;
+    border: .1rem solid;
+
+      @media (min-width: 600px) {
+        color: darkblue;
+        background: lightskyblue;
+      }
+
+       @media (min-width: 768px) {
+        color: darkgreen;
+        background: palegreen;
+      }
+
+       @media (min-width: 1024px) {
+        color: darkred;
+        background: lightpink;
+      }
+    }
+  `;
 
   return (
     <div>
@@ -42,6 +70,14 @@ const ResponsiveDesign = () => {
           return (matches) ? reactResponsiveDiv : basketballImage;
         }}
       </MediaQuery>
+
+      <h3>
+        Responsive Design - Using Styled components:
+      </h3>
+
+      <StyledSectionExample>
+        Using styled component, background color will change on breakpoints.
+      </StyledSectionExample>
 
       <h3>
         Adaptive Design:
