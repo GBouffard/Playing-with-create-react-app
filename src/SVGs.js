@@ -1,6 +1,7 @@
 import React from "react";
-import SVGImageComponent from "./svg-image-component";
+import SVGImageComponentOne from "./svg/svg-image-component-one";
 // import { linearGradient } from "react";
+import SVGImageComponentTwo from "./svg/svg-image-component-two";
 
 const styledDiv = {
   display: "flex"
@@ -70,7 +71,7 @@ const SVGs = () => {
       </div>
 
       <div>
-        <svg>
+        <svg style={{ height: "40px" }}>
           <text
             fill="none"
             stroke="purple"
@@ -104,15 +105,21 @@ const SVGs = () => {
             width: "800px"
           }}
         >
-          <SVGImageComponent text="without props (ball opacity change on hover)" />
+          <SVGImageComponentOne text="without props (ball opacity change on hover)" />
 
-          <SVGImageComponent
+          <SVGImageComponentOne
             text="with props (background color change on hover"
             backgroundColor="linen"
             mainColor="sienna"
             hoverBackgroundColor="black"
           />
         </div>
+      </div>
+      <div style={{ position: "relative", top: "100px" }}>
+        The below works with React 16 useEffect but does work in that repo
+        <br />
+        The code in here would work in a React 16 repo
+        <SVGImageComponentTwo />
       </div>
     </div>
   );

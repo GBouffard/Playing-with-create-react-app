@@ -22,9 +22,10 @@ const StyledContainer = styled.div`
   width: 250px;
 `;
 
-// svg markup taken from public/images/basketball.svg and manipulated
+/* svg markup taken from public/images/basketball.svg and manipulated in the svg
+Still better to manipulate from a container like SVGImageComponentTwo */
 
-const SVGImageComponent = ({
+const SVGImageComponentOne = ({
   text,
   backgroundColor,
   mainColor,
@@ -97,4 +98,4 @@ const SVGImageComponent = ({
   </StyledContainer>
 );
 
-export default SVGImageComponent;
+export default SVGImageComponentOne;
