@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Comment = () => {
   return (
@@ -8,7 +8,7 @@ const Comment = () => {
 
       Oops! This is empty because it's commented out!
     </div>
-  );
+  )
 }
 
-export default Comment;
+export default Comment

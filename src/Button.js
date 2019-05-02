@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 
 // same as
 // import React, { Component } from 'react';
 // export default class Button extends Component {
 
 export default class Button extends React.Component {
-  render() {
+  render () {
     const {
       onClick,
       text,
       className,
       id
-    } = this.props;
+    } = this.props
 
     return (
       <button

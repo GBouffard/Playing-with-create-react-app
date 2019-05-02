@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 const Toggleswitch = () => {
   return (
     <div>
       Still to come
     </div>
-  );
+  )
 }
 
-export default Toggleswitch;
+export default Toggleswitch

@@ -3,19 +3,19 @@ const logic = {
   myArray: [1, 2, 3, 4, 5],
   myBoolean: false,
   myNumber: 1
-};
+}
 
-logic.sum = (a, b) => a + b;
+logic.sum = (a, b) => a + b
 logic.toggleBoolean = () => {
-  logic.myBoolean = !logic.myBoolean;
+  logic.myBoolean = !logic.myBoolean
 }
 logic.addToNumber = () => {
-  logic.myNumber += 1;
+  logic.myNumber += 1
 }
 logic.substractToNumber = () => {
-  logic.myNumber -= 1;
+  logic.myNumber -= 1
 }
 
-logic.myError = () => { throw 'this is an error!'; }
+logic.myError = () => { throw 'this is an error!' }
 
-export default logic;
+export default logic

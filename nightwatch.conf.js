@@ -1,34 +1,34 @@
-require('env2')('.env'); // optionally store youre Evironment Variables in .env 
-const SCREENSHOT_PATH = './screenshots/';
-const BINPATH = './node_modules/nightwatch/bin/';
- 
-// we use a nightwatch.conf.js file so we can include comments and helper functions 
+require('env2')('.env') // optionally store youre Evironment Variables in .env
+const SCREENSHOT_PATH = './screenshots/'
+const BINPATH = './node_modules/nightwatch/bin/'
+
+// we use a nightwatch.conf.js file so we can include comments and helper functions
 module.exports = {
   'src_folders': [
-    'test/e2e'// Where you are storing your Nightwatch e2e tests 
+    'test/e2e'// Where you are storing your Nightwatch e2e tests
   ],
-  'output_folder': './reports', // reports (test outcome) output by nightwatch 
-  'selenium': { // downloaded by selenium-download module (see readme) 
-    'start_process': true, // tells nightwatch to start/stop the selenium process 
+  'output_folder': './reports', // reports (test outcome) output by nightwatch
+  'selenium': { // downloaded by selenium-download module (see readme)
+    'start_process': true, // tells nightwatch to start/stop the selenium process
     'server_path': BINPATH + 'selenium.jar',
     'host': '127.0.0.1',
     'port': 4444,
     'cli_args': {
-      'webdriver.chrome.driver' : BINPATH + 'chromedriver',
-      'webdriver.gecko.driver' : BINPATH + 'geckodriver'
+      'webdriver.chrome.driver': BINPATH + 'chromedriver',
+      'webdriver.gecko.driver': BINPATH + 'geckodriver'
     }
   },
   'test_settings': {
     'default': {
-      'launch_url' : 'http://localhost:3000/',
+      'launch_url': 'http://localhost:3000/',
       'screenshots': {
-        'enabled': true, // if you want to keep screenshots 
-        'path': './screenshots' // save screenshots here 
+        'enabled': true, // if you want to keep screenshots
+        'path': './screenshots' // save screenshots here
       },
       'globals': {
-        'waitForConditionTimeout': 5000 // sometimes internet is slow so wait. 
+        'waitForConditionTimeout': 5000 // sometimes internet is slow so wait.
       },
-      'desiredCapabilities': { // use Chrome as the default browser for tests 
+      'desiredCapabilities': { // use Chrome as the default browser for tests
         'browserName': 'chrome'
       }
     },
@@ -92,21 +92,21 @@ module.exports = {
  * on your localhost where it will be used by Nightwatch.
  /the following code checks for the existence of `selenium.jar` before trying to run our tests.
  */
- 
-require('fs').stat(BINPATH + 'selenium.jar', function (err, stat) { // got it? 
+
+require('fs').stat(BINPATH + 'selenium.jar', function (err, stat) { // got it?
   if (err || !stat || stat.size < 1) {
-    require('selenium-download').ensure(BINPATH, function(error) {
-      if (error) throw new Error(error); // no point continuing so exit! 
-      console.log('✔ Selenium & Chromedriver downloaded to:', BINPATH);
-    });
+    require('selenium-download').ensure(BINPATH, function (error) {
+      if (error) throw new Error(error) // no point continuing so exit!
+      console.log('✔ Selenium & Chromedriver downloaded to:', BINPATH)
+    })
   }
-});
- 
-function padLeft (count) { // theregister.co.uk/2016/03/23/npm_left_pad_chaos/ 
-  return count < 10 ? '0' + count : count.toString();
+})
+
+function padLeft (count) { // theregister.co.uk/2016/03/23/npm_left_pad_chaos/
+  return count < 10 ? '0' + count : count.toString()
 }
- 
-var FILECOUNT = 0; // 'global' screenshot file count 
+
+var FILECOUNT = 0 // 'global' screenshot file count
 /**
  * The default is to save screenshots to the root of your project even though
  * there is a screenshots path in the config object above! ... so we need a
@@ -115,14 +115,14 @@ var FILECOUNT = 0; // 'global' screenshot file count
  * the Platform/Browser where the test was run and the test (file) name.
  */
 function imgpath (browser) {
-  var a = browser.options.desiredCapabilities;
-  var meta = [a.platform];
-  meta.push(a.browserName ? a.browserName : 'any');
-  meta.push(a.version ? a.version : 'any');
-  meta.push(a.name); // this is the test filename so always exists. 
-  var metadata = meta.join('~').toLowerCase().replace(/ /g, '');
-  return SCREENSHOT_PATH + metadata + '_' + padLeft(FILECOUNT++) + '_';
+  var a = browser.options.desiredCapabilities
+  var meta = [a.platform]
+  meta.push(a.browserName ? a.browserName : 'any')
+  meta.push(a.version ? a.version : 'any')
+  meta.push(a.name) // this is the test filename so always exists.
+  var metadata = meta.join('~').toLowerCase().replace(/ /g, '')
+  return SCREENSHOT_PATH + metadata + '_' + padLeft(FILECOUNT++) + '_'
 }
- 
-module.exports.imgpath = imgpath;
-module.exports.SCREENSHOT_PATH = SCREENSHOT_PATH;
+
+module.exports.imgpath = imgpath
+module.exports.SCREENSHOT_PATH = SCREENSHOT_PATH

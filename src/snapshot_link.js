@@ -1,33 +1,33 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from 'react'
+import classNames from 'classnames'
 
 const status = {
   hovered: 'hovered',
-  normal: 'normal',
-};
+  normal: 'normal'
+}
 
 export default class SnapShotLink extends React.Component {
-  constructor(props) {
-    super(props);
-    this._onMouseEnter = this._onMouseEnter.bind(this);
-    this._onMouseLeave = this._onMouseLeave.bind(this);
+  constructor (props) {
+    super(props)
+    this._onMouseEnter = this._onMouseEnter.bind(this)
+    this._onMouseLeave = this._onMouseLeave.bind(this)
     this.state = {
-      class: status.normal,
-    };
+      class: status.normal
+    }
   }
 
-  _onMouseEnter() {
-    console.log('enter');
-    this.setState({class: status.hovered});
+  _onMouseEnter () {
+    console.log('enter')
+    this.setState({ class: status.hovered })
   }
 
-  _onMouseLeave() {
-    console.log('leave');
-    this.setState({class: status.normal});
+  _onMouseLeave () {
+    console.log('leave')
+    this.setState({ class: status.normal })
   }
 
-  render() {
-    const snapShotLinkClass = classNames('link-with-animation' , this.state.class);
+  render () {
+    const snapShotLinkClass = classNames('link-with-animation', this.state.class)
 
     return (
       <a
@@ -37,10 +37,10 @@ export default class SnapShotLink extends React.Component {
         onMouseLeave={this._onMouseLeave}>
         {this.props.children}
       </a>
-    );
+    )
   }
 }
 
 SnapShotLink.propTypes = {
   page: React.PropTypes.string
-};
+}

@@ -1,5 +1,5 @@
-import React from 'react';
-import DropdownList from './dropdown-list';
+import React from 'react'
+import DropdownList from './dropdown-list'
 
 const dropdownArray = [
   'Monday',
@@ -9,16 +9,16 @@ const dropdownArray = [
   'Friday',
   'Saturday',
   'Sunday'
-];
+]
 
-function DropdownMenus() {
+function DropdownMenus () {
   return (
     <div>
       <DropdownList
         options={dropdownArray}
-        dropdownListId="days-of-the-weeks-dropdown-list"/>
+        dropdownListId='days-of-the-weeks-dropdown-list' />
     </div>
-  );
+  )
 }
 
-export default DropdownMenus;
+export default DropdownMenus

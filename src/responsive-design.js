@@ -1,23 +1,23 @@
-import React from 'react';
-import MediaQuery from 'react-responsive';
-import styled from 'styled-components';
+import React from 'react'
+import MediaQuery from 'react-responsive'
+import styled from 'styled-components'
 
 const ResponsiveDesign = () => {
   const reactResponsiveDiv = (
     <div
-      className="responsive-design-div">
-      - ideal when a complete different component needs to be rendered<br/>
-      - as opposed to modifying/updating the css.<br/><br/>
+      className='responsive-design-div'>
+      - ideal when a complete different component needs to be rendered<br />
+      - as opposed to modifying/updating the css.<br /><br />
       Example: a basktet ball image will replace that div content at breakpoint 600px.
     </div>
-  );
+  )
 
   const basketballImage = (
     <img
-      className="basketball-image"
-      alt="this is a basketball icon"
-      src="./images/basketball.png" />
-  );
+      className='basketball-image'
+      alt='this is a basketball icon'
+      src='./images/basketball.png' />
+  )
 
   const StyledSectionExample = styled.section`
     display: flex;
@@ -44,14 +44,14 @@ const ResponsiveDesign = () => {
         background: lightpink;
       }
     }
-  `;
+  `
 
-  const InitialDiv = ({ className, children}) => (
+  const InitialDiv = ({ className, children }) => (
     <div
       className={className}>
       {children}
     </div>
-  );
+  )
 
   const StyledDiv = styled(InitialDiv)`
     display: block;
@@ -61,7 +61,7 @@ const ResponsiveDesign = () => {
     background: seashell;
     padding: .2rem;
     border: .2rem dotted darkgray;
-  `;
+  `
 
   const breakpoints = {
     small: {
@@ -84,25 +84,24 @@ const ResponsiveDesign = () => {
       breakpoint: '(min-width: 1025px)',
       number: 5
     }
-  };
+  }
 
   const makeReactResponsiveExample = () => {
     return Object.keys(breakpoints).map((reference, index) => {
-
       return (
         <MediaQuery
           key={index}
           query={breakpoints[`${reference}`].breakpoint} >
           <div
-            className="react-responsive-examples" >
+            className='react-responsive-examples' >
             {breakpoints[`${reference}`].number}
           </div>
         </MediaQuery>
-      );
-    });
-  };
+      )
+    })
+  }
 
-  const reactResponsiveElement = makeReactResponsiveExample();
+  const reactResponsiveElement = makeReactResponsiveExample()
 
   return (
     <div>
@@ -111,11 +110,11 @@ const ResponsiveDesign = () => {
       </h3>
 
       <img
-        className="responsive-design"/>
+        className='responsive-design' />
 
       <div
-        className="responsive-div">
-        Other media queries include:<br/>
+        className='responsive-div'>
+        Other media queries include:<br />
         orientation: landscape / Retina graphics / aspect-ratio / resolution and more
       </div>
 
@@ -126,10 +125,10 @@ const ResponsiveDesign = () => {
       <MediaQuery
         minWidth={600}>
         {(matches) => {
-          return (matches) ? reactResponsiveDiv : basketballImage;
+          return (matches) ? reactResponsiveDiv : basketballImage
         }}
       </MediaQuery>
-      
+
       <p>
         Counting using react responsive as an example (and using query):
       </p>
@@ -152,7 +151,7 @@ const ResponsiveDesign = () => {
       </h3>
 
       <div
-        className="responsive-div">
+        className='responsive-div'>
         Need to to try modernizr browser detection
       </div>
 
@@ -166,7 +165,7 @@ const ResponsiveDesign = () => {
         - even if not CSS, html lang="en"
       </h3>
     </div>
-  );
+  )
 }
 
-export default ResponsiveDesign;
+export default ResponsiveDesign

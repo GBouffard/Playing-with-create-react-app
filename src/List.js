@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 const renderItems = (items, itemsClassName) => {
-  const classNames = classnames('list__item', itemsClassName);
+  const classNames = classnames('list__item', itemsClassName)
 
   return items.map((item, index) => (
     <li
@@ -11,10 +11,10 @@ const renderItems = (items, itemsClassName) => {
       key={index}>
       {item}
     </li>
-  ));
-};
+  ))
+}
 
-export default function List(props) {
+export default function List (props) {
   const {
     items,
     className,
@@ -23,18 +23,18 @@ export default function List(props) {
     isOrdered,
     isRoman,
     isInlined
-  } = props;
+  } = props
 
   const listClassNames = classnames('list', className, {
     'list--numbered': isOrdered,
     'list--roman': isRoman,
     'list--hide-bullets': hideBullets,
     'list--inline': isInlined
-  });
+  })
 
-  const tag = isOrdered || isRoman ? 'ol' : 'ul';
+  const tag = isOrdered || isRoman ? 'ol' : 'ul'
 
-  return React.createElement(tag, { className: listClassNames }, renderItems(items, itemsClassName));
+  return React.createElement(tag, { className: listClassNames }, renderItems(items, itemsClassName))
 }
 
 List.propTypes = {
@@ -47,4 +47,4 @@ List.propTypes = {
   isOrdered: PropTypes.bool,
   isRoman: PropTypes.bool,
   isInlined: PropTypes.bool
-};
+}
