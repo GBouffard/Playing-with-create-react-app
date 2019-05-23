@@ -37,6 +37,7 @@
     "test2": "./node_modules/.bin/nightwatch --env guillaumeTest",
     "e2e": "node_modules/.bin/nightwatch --config nightwatch.conf.js",
     "testcafe": "testcafe chrome ./test/testcafe/desktop.js",
+    "testcafe-mobile-ci": "testcafe chrome ./test/testcafe/mobile.js",
     "testcafe-mobile": "testcafe \"chrome:emulation:mobile=true;device=iphone 6\" ./test/testcafe/desktop.js --speed 0.99"
   }
 }
