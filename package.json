@@ -8,7 +8,7 @@
     "chai-jquery": "^2.0.0",
     "env2": "^2.2.0",
     "enzyme": "^2.8.2",
-    "nightwatch": "^0.9.16",
+    "nightwatch": "^2.3.9",
     "react-addons-test-utils": "^15.3.2",
     "react-scripts": "0.9.5",
     "react-test-renderer": "^15.5.4",
